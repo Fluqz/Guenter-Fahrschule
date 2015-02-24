@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>CMA</title>	
+	<meta name="description" content="This website was built to support artists trying to show their unique art the world. It's a small project of mine, Robin Hlawinka.">
+	<meta name="author" content="Robin Hlawinka">
+
+  	<link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
+	<link rel="stylesheet" type="text/css" href="css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
+
+	<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
+</head>
+
+<body>
+	<header>
+		<div id="inner-header">
+			<div id="logo"></div>
+			<ul>
+				<li><a class="current" href="">Work</a></li>
+				<li><a href="">Artists</a></li>
+				<li><a href="">About</a></li>
+				<li><a href="">Contact</a></li>
+			</ul>
+			
+			<div id="media">
+				<a id="facebook" class="mediaBtn" target="_blank" href="https://www.facebook.com/pages/Parallax/919993088010924?fref=ts"><i class="fa fa-facebook"></i></a>
+				<a id="google" class="mediaBtn" target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+				<a id="twitter" class="mediaBtn" target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+				<a id="instagram" class="mediaBtn" target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+			</div>
+			<div id="register">
+				<button id="loginBtn">Log in</button>
+				<button id="signupBtn">Sign up</button>				
+			</div>
+		</div>
+	</header>
+
+	<div id="login">
+		<div class="close"><i class="fa fa-times"></i></div>
+		<div id="tabs">
+			<div class="front-login log-active">Log in</div>
+			<span>|</span>
+			<div class="front-signup">Sign up</div>
+		</div>		
+		<form action="" method="post" id="loginField">
+			<div class="icon-box"><i class="fa fa-user"></i></div><input type="email" required name="lEmail" placeholder="mail@example.com" id="loginDataInput"/>
+			<div class="icon-box"><i class="fa fa-lock"></i></div><input type="password" required name="password" placeholder="Password"/>
+			<a href="resetPassword.html" style="margin-bottom:10px;">Forgot your password?</a>
+			<button>Log in</button>
+			<a href="createAccount.html">No account yet?</a>
+		</form>
+		<form action="" method="post" id="signupField">
+			<div class="icon-box"><i class="fa fa-user"></i></div><input type="name" required name="name" placeholder="Firstname Lastname" id="signupDataInput"/>
+			<div class="icon-box"><i class="fa fa-envelope"></i></div><input type="email" required name="lEmail" placeholder="mail@example.com"/>
+			<div class="icon-box"><i class="fa fa-unlock-alt"></i></div><input type="password" required name="password" placeholder="Password"/>
+			<div class="icon-box"><i class="fa fa-lock"></i></div><input type="password" required name="confirmPW" placeholder="Confirm password"/>
+			<button>Sign up for free</button>
+		</form>
+	</div>
+
+	<div id="top"><i class="fa fa-chevron-up"></i></div>
+
+
+	<div id="skrollr-body">
+		<div id="color-palette"></div>
+		<div id="front-view">
+			<div class="container">
+				<form action="" class="searchbox">
+					<input type="text" class="searchbox-input" placeholder="Enter search term" name="search" id="search">
+					<button type="submit" class="searchbox-submit" value=""><i class="fa fa-search"></i></button>
+					<span class="searchbox-icon"><i class="fa fa-search"></i></span>
+				</form>				
+			</div>
+		</div>
+		<div id="register-ad">
+			<div id="close-register-ad"><i class="fa fa-times-circle"></i></div>
+			<p>Sign up and upload your art to get present in the WWW.</p>
+			<div id="register">
+				<a href="signup.html">Sign up</a>				
+			</div>
+		</div>
+
+		<div id="wrapper">
+			<div id="filter">
+				
+			</div>
+
+
+			<div id="container">
+				<div class="item">
+					<div class="image"><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_10.jpg"></div>
+					<div class="image-details">
+						<h1 class="image-title">Celluloid Garden</h1>
+						<div class="image-artist">
+							<span>by</span>					
+							<h1>Ryan Shivers</h1>
+						</div>
+						<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+					</div>
+					<div class="image-views">
+						<div class="views">123</div>
+						<div class="comments">5 Comments</div>
+						<div class="share">Share</div>
+					</div>
+				</div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<div class="item">
+					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
+					<div class="image-details">
+						<h1 class="image-title">Celluloid Garden</h1>
+						<div class="image-artist">
+							<span>by</span>					
+							<h1>Ryan Shivers</h1>
+						</div>
+						<p class="description">The description........</p>
+					</div>
+					<div class="image-views">
+						<div class="views">123</div>
+						<div class="comments">5 Comments</div>
+						<div class="share">Share</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image"><img id="4" class="gallery image" src="imgs/celluloid-garden-illustration.jpg"></div>
+					<div class="image-details">
+						<h1 class="image-title">Celluloid Garden</h1>
+						<div class="image-artist">
+							<span>by</span>					
+							<h1>Ryan Shivers</h1>
+						</div>
+						<p class="description">The description........</p>
+					</div>
+					<div class="image-views">
+						<div class="views">123</div>
+						<div class="comments">5 Comments</div>
+						<div class="share">Share</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image"><img id="4" class="gallery image" src="imgs/celluloid-garden-illustration.jpg"></div>
+					<div class="image-details">
+						<h1 class="image-title">Celluloid Garden</h1>
+						<div class="image-artist">
+							<span>by</span>					
+							<h1>Ryan Shivers</h1>
+						</div>
+						<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, amet.</p>
+					</div>
+					<div class="image-views">
+						<div class="views">123</div>
+						<div class="comments">5 Comments</div>
+						<div class="share">Share</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
+					<div class="image-details">
+						<h1 class="image-title">Celluloid Garden</h1>
+						<div class="image-artist">
+							<span>by</span>					
+							<h1>Ryan Shivers</h1>
+						</div>
+						<p class="description">The description........</p>
+					</div>
+					<div class="image-views">
+						<div class="views">123</div>
+						<div class="comments">5 Comments</div>
+						<div class="share">Share</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
+					<div class="image-details">
+						<h1 class="image-title">Celluloid Garden</h1>
+						<div class="image-artist">
+							<span>by</span>					
+							<h1>Ryan Shivers</h1>
+						</div>
+						<p class="description">The description........</p>
+					</div>
+					<div class="image-views">
+						<div class="views">123</div>
+						<div class="comments">5 Comments</div>
+						<div class="share">Share</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
+					<div class="image-details">
+						<h1 class="image-title">Celluloid Garden</h1>
+						<div class="image-artist">
+							<span>by</span>					
+							<h1>Ryan Shivers</h1>
+						</div>
+						<p class="description">The description........</p>
+					</div>
+					<div class="image-views">
+						<div class="views">123</div>
+						<div class="comments">5 Comments</div>
+						<div class="share">Share</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
+					<div class="image-details">
+						<h1 class="image-title">Celluloid Garden</h1>
+						<div class="image-artist">
+							<span>by</span>					
+							<h1>Ryan Shivers</h1>
+						</div>
+						<p class="description">The description........</p>
+					</div>
+					<div class="image-views">
+						<div class="views">123</div>
+						<div class="comments">5 Comments</div>
+						<div class="share">Share</div>
+					</div>
+				</div>
+				<div class="item">
+					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
+					<div class="image-details">
+						<h1 class="image-title">Celluloid Garden</h1>
+						<div class="image-artist">
+							<span>by</span>					
+							<h1>Ryan Shivers</h1>
+						</div>
+						<p class="description">The description........</p>
+					</div>
+					<div class="image-views">
+						<div class="views">123</div>
+						<div class="comments">5 Comments</div>
+						<div class="share">Share</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<footer>
+			
+		</footer>
+	</div>
+
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/color.js"></script>
+	<script type="text/javascript" src="js/jquery.smooth-scroll.min.js"></script>
+	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript" src="js/skrollr.menu.min.js"></script>
+	<script type="text/javascript" src="js/imagesloaded.js"></script>
+    <script type="text/javascript" src="js/jquery.unveil.js"></script>
+    <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
+</body>
+</html>

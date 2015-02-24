@@ -6,24 +6,26 @@ $(document).ready(function(){
 	$body = $('body');
 	$contentWrapper = $('#content-wrapper');
 	$content = $('#content');
-	$sidemenuBtn = $('#sidemenu-button');
-	$sidebarOut = false;
 	$scrollToTop = $('#top');
 	$loginField = $('#login');
 	$loginBtn = $('#loginBtn');
 	$signupBtn = $('#signupBtn');
 	$loginFieldOut = false;
+	$image = $('#container img');
+
+	//Masonry
+	var container = document.querySelector('#container');
+	var msnry = new Masonry( container, {
+		columnWidth: 300,
+		itemSelector: '.item'
+	});
 
 	getSize();
-	initMenuSidebarButton($sidebarOut);
 
 	// Get window sizes 
 	function getSize(){
 		winH = $window.height();
 		winW = $window.width();
-
-		$contentWrapper.width(winW - 280);
-		$content.width(winW-280);
 
 
 		if(winH >= 500){
@@ -34,43 +36,10 @@ $(document).ready(function(){
 	// resize on resize
 	$window.resize(function(event){
 		getSize();
-		initMenuSidebarButton($sidebarOut);
 	});
 
-	// Initialize Sidebar
-	function initMenuSidebarButton(sidebarOut){
-		if(!$sidebarOut){
-			$sidemenuBtn.css({'right': '0px'});
-		}
-		else{
-			$sidemenuBtn.css({'right': '290px'});		
-		}
-	}
 
-	// slide in Sidebar Menu
-	$sidemenuBtn.on('click', function(event){
-		event.preventDefault();
-		toggleSidemenu();
-	});
 
-	// Toggleing sidebar function
-	function toggleSidemenu(){
-		if(!$sidebarOut){
-			$('#artistSidebar').addClass('sidemenu-shadow').animate({'right': '0px'}, 700);
-			$sidemenuBtn.animate({'right': '290px'}, 700);
-			$scrollToTop.animate({'right': '315px'}, 700);
-			$sidebarOut=true;
-			document.getElementById('artistSearch').focus();
-		}
-		else{			
-			$('#artistSidebar').animate({'right': '-300px'}, 700, function(){
-				$(this).removeClass('sidemenu-shadow');
-			});
-			$sidemenuBtn.animate({'right': '0px'}, 700);
-			$scrollToTop.animate({'right': '25px'}, 700);
-			$sidebarOut = false;
-		}
-	}
 
 	// Fade in/out #top button
 	$window.scroll(function(){
@@ -81,11 +50,34 @@ $(document).ready(function(){
 	    }
 	});
 
+
+
+	$image.on('mouseenter', function(event) {
+		event.preventDefault();
+		$(this).parent().next().stop(false, false).show('slow');
+	});
+
+	$image.on('mouseleave', function(event) {
+		event.preventDefault();		
+		$(this).parent().next().stop(false, false).hide('slow');
+	});
+
+
 	// Smooth scroll on #top
 	$scrollToTop.on('click', function(event){
 		event.preventDefault();
 		$('html, body').animate({scrollTop:0}, 1000);
 	});
+
+
+
+	$('#close-register-ad').on('click', function(event) {
+		event.preventDefault();
+		$('#register-ad').slideUp(100);
+	});
+
+
+
 
 	// Show login form
 	$loginBtn.bind('click', function(event){
@@ -113,20 +105,15 @@ $(document).ready(function(){
 	// Click animations
 	$(this).mouseup(function (e){
 	    var loginField = $loginField;
-	    var button = $loginBtn;
+	    var loginBtn = $loginBtn;
+	    var signupBtn = $signupBtn;
 	    var sidebar = $('#artistSidebar');
 	    var close = $('#login .close i');
 
-	    // Toggle sidemenu clicken anywhere else 
-	    if (!sidebar.is(e.target) && sidebar.has(e.target).length === 0 &&
-	    	!button.is(e.target) && button.has(e.target).length === 0 && $sidebarOut){
-	    	toggleSidemenu();
-	        document.getElementById('artistSearch').blur();
-	    }
-
 	    // Hide login form clicking anywhere else
 	    if (!loginField.is(e.target) && loginField.has(e.target).length === 0 &&
-	    	!button.is(e.target) && button.has(e.target).length === 0 && $loginFieldOut){
+	    	!loginBtn.is(e.target) && loginBtn.has(e.target).length === 0 &&
+	    	!signupBtn.is(e.target) && signupBtn.has(e.target).length === 0 && $loginFieldOut){
 	        loginField.animate({'top': '-300px'});
 	        $loginFieldOut=false;
 	    }
@@ -170,5 +157,64 @@ $(document).ready(function(){
 		document.getElementById('signupDataInput').focus();
 	});
 
+    // Search field
+	$('.searchbox-input').prop('required', 'true');
+	var submitIcon = $('.searchbox-icon');
+	var inputBox = $('.searchbox-input');
+	var searchbox = $('.searchbox');
+	var isOpen = false;
+	submitIcon.click(function() {
+		if(!isOpen){
+			searchbox.addClass('searchbox-open');
+			inputBox.focus();
+			isOpen = true;
+		} else{
+			searchbox.removeClass('searchbox-open');
+			inputBox.focusout();
+			if(filled())
+				searchbox.submit();
+			isOpen = false;
+		}
+	});
+
+	$('#search').keyup(function() {
+		buttonUp();
+	});
+
+
+	submitIcon.mouseup(function() {
+		return false;
+	});
+	searchbox.mouseup(function() {
+		return false;
+	});
+	$(document).mouseup(function() {
+		if(isOpen && !filled()){
+
+			$('.searchbox-icon').css('display', 'block');
+			submitIcon.click();
+		}
+	});
 });
 
+function filled(){
+	var inputVal = $('.searchbox-input').val();
+	inputVal = $.trim(inputVal).length;
+
+	if(inputVal !== 0)
+		return true;
+	else
+		return false;
+}
+
+function buttonUp(){
+	var inputVal = $('.searchbox-input').val();
+	inputVal = $.trim(inputVal).length;
+
+	if(inputVal !== 0){
+		$('.searchbox-icon').css('display', 'none');
+	} else{
+		$('.searchbox-input').val('');
+		$('.searchbox-icon').css('display', 'block');
+	}
+}
