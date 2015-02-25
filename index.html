@@ -66,15 +66,20 @@
 
 	<div id="skrollr-body">
 		<div id="color-palette"></div>
+
 		<div id="front-view">
-			<div class="container">
+			<div id="front-animation">
+				<a href="#filter"><img src="imgs/deer.gif"></a>
+			</div>
+			<div class="search-container">
 				<form action="" class="searchbox">
-					<input type="text" class="searchbox-input" placeholder="Enter search term" name="search" id="search">
+					<input type="text" class="searchbox-input" placeholder="Find your favourites." name="search" id="search">
 					<button type="submit" class="searchbox-submit" value=""><i class="fa fa-search"></i></button>
 					<span class="searchbox-icon"><i class="fa fa-search"></i></span>
 				</form>				
 			</div>
 		</div>
+		
 		<div id="register-ad">
 			<div id="close-register-ad"><i class="fa fa-times-circle"></i></div>
 			<p>Sign up and upload your art to get present in the WWW.</p>
@@ -83,29 +88,45 @@
 			</div>
 		</div>
 
+
+
+
+
+
 		<div id="wrapper">
 			<div id="filter">
-				
+				<a href="">Digital</a>
+				<a href="">Analog</a>
 			</div>
 
 
-			<div id="container">
-				<div class="item">
-					<div class="image"><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_10.jpg"></div>
-					<div class="image-details">
-						<h1 class="image-title">Celluloid Garden</h1>
-						<div class="image-artist">
-							<span>by</span>					
-							<h1>Ryan Shivers</h1>
+			<div id="image-container">
+				<ul id="grid">
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_04.jpg" height="606" width="940">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
 						</div>
-						<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
-					</div>
-					<div class="image-views">
-						<div class="views">123</div>
-						<div class="comments">5 Comments</div>
-						<div class="share">Share</div>
-					</div>
-				</div>
+					</li>
+
+					
 
 
 
@@ -137,138 +158,368 @@
 
 
 
-
-
-				<div class="item">
-					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
-					<div class="image-details">
-						<h1 class="image-title">Celluloid Garden</h1>
-						<div class="image-artist">
-							<span>by</span>					
-							<h1>Ryan Shivers</h1>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>			
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
 						</div>
-						<p class="description">The description........</p>
-					</div>
-					<div class="image-views">
-						<div class="views">123</div>
-						<div class="comments">5 Comments</div>
-						<div class="share">Share</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="image"><img id="4" class="gallery image" src="imgs/celluloid-garden-illustration.jpg"></div>
-					<div class="image-details">
-						<h1 class="image-title">Celluloid Garden</h1>
-						<div class="image-artist">
-							<span>by</span>					
-							<h1>Ryan Shivers</h1>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_02.jpg" height="807" width="660">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>			
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
 						</div>
-						<p class="description">The description........</p>
-					</div>
-					<div class="image-views">
-						<div class="views">123</div>
-						<div class="comments">5 Comments</div>
-						<div class="share">Share</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="image"><img id="4" class="gallery image" src="imgs/celluloid-garden-illustration.jpg"></div>
-					<div class="image-details">
-						<h1 class="image-title">Celluloid Garden</h1>
-						<div class="image-artist">
-							<span>by</span>					
-							<h1>Ryan Shivers</h1>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/inspiration-illustration-02.jpg" height="801" width="660">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>			
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
 						</div>
-						<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, amet.</p>
-					</div>
-					<div class="image-views">
-						<div class="views">123</div>
-						<div class="comments">5 Comments</div>
-						<div class="share">Share</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
-					<div class="image-details">
-						<h1 class="image-title">Celluloid Garden</h1>
-						<div class="image-artist">
-							<span>by</span>					
-							<h1>Ryan Shivers</h1>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/soundcity-print.jpg" height="1200" width="1600">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>			
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
 						</div>
-						<p class="description">The description........</p>
-					</div>
-					<div class="image-views">
-						<div class="views">123</div>
-						<div class="comments">5 Comments</div>
-						<div class="share">Share</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
-					<div class="image-details">
-						<h1 class="image-title">Celluloid Garden</h1>
-						<div class="image-artist">
-							<span>by</span>					
-							<h1>Ryan Shivers</h1>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_07.jpg">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
 						</div>
-						<p class="description">The description........</p>
-					</div>
-					<div class="image-views">
-						<div class="views">123</div>
-						<div class="comments">5 Comments</div>
-						<div class="share">Share</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
-					<div class="image-details">
-						<h1 class="image-title">Celluloid Garden</h1>
-						<div class="image-artist">
-							<span>by</span>					
-							<h1>Ryan Shivers</h1>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/celluloid-garden-illustration.jpg">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, amet.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
 						</div>
-						<p class="description">The description........</p>
-					</div>
-					<div class="image-views">
-						<div class="views">123</div>
-						<div class="comments">5 Comments</div>
-						<div class="share">Share</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
-					<div class="image-details">
-						<h1 class="image-title">Celluloid Garden</h1>
-						<div class="image-artist">
-							<span>by</span>					
-							<h1>Ryan Shivers</h1>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
 						</div>
-						<p class="description">The description........</p>
-					</div>
-					<div class="image-views">
-						<div class="views">123</div>
-						<div class="comments">5 Comments</div>
-						<div class="share">Share</div>
-					</div>
-				</div>
-				<div class="item">
-					<div class="image"><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></div>
-					<div class="image-details">
-						<h1 class="image-title">Celluloid Garden</h1>
-						<div class="image-artist">
-							<span>by</span>					
-							<h1>Ryan Shivers</h1>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_03.jpg">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
 						</div>
-						<p class="description">The description........</p>
-					</div>
-					<div class="image-views">
-						<div class="views">123</div>
-						<div class="comments">5 Comments</div>
-						<div class="share">Share</div>
-					</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_06.jpg">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/background2.jpg" height="1462" width="2048">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/background.jpg" height="1462" width="2048">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/headerbackground.jpg" height="560" width="960">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/mediahover.png">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
+						</div>
+					</li>
+					<li>
+						<div class="item">
+							<div class="image">
+								<img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_10.jpg">
+								<div class="expand-image"><i class="fa fa-expand"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-views">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div><!--container end-->
+
+			<div class="prev-next-imgpage">
+				<a id="previous-page" href=""><i class="fa fa-chevron-left"></i></a>
+				<a id="next-page" href=""><i class="fa fa-chevron-right"></i></a>
+			</div>
+			<div class="line"></div>
+
+			<div id="advertisement">
+				<div id="ad-wrap">
+					<div class="ad">This could be your ad!</div>
+					<div class="ad">Your ad here!</div>
 				</div>
 			</div>
-		</div>
+
+		</div><!--wrapper end-->
 		<footer>
 			
 		</footer>
@@ -279,8 +530,8 @@
 	<script type="text/javascript" src="js/jquery.smooth-scroll.min.js"></script>
 	<script type="text/javascript" src="js/skrollr.min.js"></script>
 	<script type="text/javascript" src="js/skrollr.menu.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slides.min.js"></script>
 	<script type="text/javascript" src="js/imagesloaded.js"></script>
-    <script type="text/javascript" src="js/jquery.unveil.js"></script>
     <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/script.js"></script>
 </body>

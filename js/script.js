@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	var s = skrollr.init({smoothScrolling: true, forceHeight: true});
+	var s = skrollr.init({smoothScrolling: true, forceHeight: false});
 
 	$window = $(window);
 	$body = $('body');
@@ -11,16 +11,43 @@ $(document).ready(function(){
 	$loginBtn = $('#loginBtn');
 	$signupBtn = $('#signupBtn');
 	$loginFieldOut = false;
-	$image = $('#container img');
+	$image = $('#image-container img');
 
 	//Masonry
-	var container = document.querySelector('#container');
-	var msnry = new Masonry( container, {
-		columnWidth: 300,
-		itemSelector: '.item'
+	var container = document.querySelector('#image-container');
+	var msnry;
+
+	imagesLoaded(container, function(){
+		msnry = new Masonry( container, {
+			columnWidth: 300,
+			itemSelector: '.item'
+		});
 	});
 
-	getSize();
+	$image.on('click', function(event) {
+		event.preventDefault();
+		if(!$(this).parent().has(event.target, 'item'))
+			return;
+
+		$(this).parent().next().show();
+		msnry.layout();
+	});	
+
+	$('.close-description').on('click', function(event) {
+		event.preventDefault();
+		$(this).parent().hide();
+		msnry.layout();
+	});
+
+	// Slide js
+	$('#slides').slidesjs({
+		width: 600,
+		height: 400
+	});
+
+	// Front gif anchor scrolling
+	$('#front-animation a').smoothScroll();
+
 
 	// Get window sizes 
 	function getSize(){
@@ -49,19 +76,6 @@ $(document).ready(function(){
 	        $scrollToTop.stop(true, true).fadeOut('fast');
 	    }
 	});
-
-
-
-	$image.on('mouseenter', function(event) {
-		event.preventDefault();
-		$(this).parent().next().stop(false, false).show('slow');
-	});
-
-	$image.on('mouseleave', function(event) {
-		event.preventDefault();		
-		$(this).parent().next().stop(false, false).hide('slow');
-	});
-
 
 	// Smooth scroll on #top
 	$scrollToTop.on('click', function(event){
@@ -109,6 +123,7 @@ $(document).ready(function(){
 	    var signupBtn = $signupBtn;
 	    var sidebar = $('#artistSidebar');
 	    var close = $('#login .close i');
+	    var items = $('.item');
 
 	    // Hide login form clicking anywhere else
 	    if (!loginField.is(e.target) && loginField.has(e.target).length === 0 &&
@@ -135,6 +150,12 @@ $(document).ready(function(){
 	    if(sidebar.is(e.target)){
 	        loginField.animate({'top': '-300px'});
 	        $loginFieldOut=false;
+	    }
+
+	    // Close all image details
+	    if(!items.is(e.target)){	    	
+			$('.item .image-details').hide();
+			msnry.layout();
 	    }
 	});
 

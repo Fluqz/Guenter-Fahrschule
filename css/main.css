@@ -155,7 +155,6 @@ header #logo{
 #media{
 	width: 195px;
 	height: 60px;
-	line-height: 60px;
 	float: right;
 }
 
@@ -172,6 +171,7 @@ header #logo{
 	margin: 0;
 	display: inline-block;
 	margin-right: 5px;
+	margin-top: 10px;
 
 	-o-transition:color .2s, background .2s, transfrom .5s;
 	-ms-transition:color .2s, background .2s, transfrom .5s;
@@ -215,59 +215,33 @@ header #logo{
 	position: relative;
 }
 
-#register-ad{
-	position: relative;
-	width: 100%;
-	height: 60px;
-	background-color: #323232;
-	text-align: center;
-}
-
-#close-register-ad{
-	position: absolute;
-	top: 2px;
-	right: 5px;
-	color: #efefef;
-	opacity: .5;
-	cursor: pointer;
-	color: #ddd;
-	font-size: 15px;
-}
-
-#register-ad p{
-	display: inline-block;
-	color: #ddd;
-}
-
-#close-register-ad:hover{
-	opacity: .8;
-}
-
-#register-ad #register{
-	float: none;
-}
-
-#register a{
+/* GIF */
+#front-animation{
 	display: block;
-	width: 100px;
-	height: 30px;
-	line-height: 30px;
+	width: 100%;
+	height: 400px;
 	text-align: center;
-	border-radius: 2px;
-	background-color: #FF6347;
-	color: #323232;
-	font-size: 15px;
-	font-weight: bold;
-	margin-left: 20px;
 }
 
+#slides {
+  display:none;
+  z-index: 999999;
+}
 
+#front-animation a{
+	display: inline-block;
+	height: auto;
+	margin: 0 auto;
+}
 
-
-
+#front-animation img{
+	display: block;
+	height: 400px;
+	width: auto;
+}
 
 /* Searchbar */
-.container{
+.search-container{
 	z-index: 1000;
 	width: 25%;
 	position: absolute;
@@ -354,31 +328,103 @@ header #logo{
 
 
 
+/* REGISTER AD */
+#register-ad{
+	position: relative;
+	width: 100%;
+	height: 60px;
+	background-color: transparent; /* PARALAX SCROLLING */
+	text-align: center;
+	-moz-box-shadow: 0 0 2px #888;
+	-webkit-box-shadow: 0 0 2px#888;
+	box-shadow: 0 0 2px #888;
+}
+
+#close-register-ad{
+	position: absolute;
+	top: 4px;
+	right: 7px;
+	color: #323232;
+	opacity: .5;
+	cursor: pointer;
+	font-size: 15px;
+}
+
+#register-ad p{
+	display: inline-block;
+	color: #323232;
+}
+
+#close-register-ad:hover{
+	opacity: .8;
+}
+
+#register-ad #register{
+	float: none;
+}
+
+#register a{
+	display: block;
+	width: 100px;
+	height: 30px;
+	line-height: 30px;
+	text-align: center;
+	border-radius: 2px;
+	background-color: #FF6347;
+	color: #323232;
+	font-size: 15px;
+	font-weight: bold;
+	margin-left: 20px;
+}
+
+
 
 
 /* CONTENT */
-
 #wrapper{
 	width: 1200px;
-	height: 1000px;
 	margin: 0px auto;
+	overflow: hidden;
+	margin-top: 40px;
 }
 
 /* FILTER */
-
 #filter{
-	width: 100%;
+	width: 90%;
 	height: 50px;
+	line-height: 50px;
+	padding: 0px 5%;
+	margin-bottom: 40px;
 }
 
+#filter a{
+	display: inline-block;
+	color: #44889F;
+	margin-right: 20px;
+}
 
+#filter a:last-child{
+	margin-right: 0;
+}
+
+/* IMAGE CONTAINER MASONRY */
+#image-container{
+	margin-bottom: 30px;
+}
+
+/* Item container */
 .item{
 	position: relative;
 	width: 24%;
 	height: auto;
 	margin-left: .5%;
 	margin-bottom: 1%;
-	background-color: #fff;
+	background-color: transparent;
+	overflow: hidden;
+	border-radius: 3px;
+	/*-moz-box-shadow: 0 0 2px #888;
+	-webkit-box-shadow: 0 0 2px#888;
+	box-shadow: 0 0 2px #888;*/
 }
 
 /* image */
@@ -388,21 +434,72 @@ header #logo{
 	border-top-left-radius: 3px;
 	border-top-right-radius: 3px;
 	cursor: pointer;
+	display: block;
 }
 
 .item img:hover{
 	opacity: 0.7;
 }
 
+.item img:hover+.expand-image{
+	display: block;
+}
+
+.image{
+	width: 100%;
+	position: relative;
+}
+
+/* Expand image */
+.expand-image{
+	display: none;
+	width: 25px;
+	height: 25px;
+	text-align: center;
+	line-height: 25px;
+	position: absolute;
+	bottom: 3px;
+	right: 3px;
+	z-index: 100;
+	background-color: transparent;
+	cursor: pointer;
+	border-radius: 100%;
+}
+
+.expand-image:hover{
+	background: rgba(255,255,255,.5);
+	display: block;
+}
+
+
+/* Details */
 .image-details{
+	position: relative;
 	display: none;
 	width: 92%;
 	height: auto;
-	margin: 0px 4%;
-	padding: 10px 0px;
+	padding: 10px 4%;
 }
 
-#container h1{
+.image-details:hover{
+}
+
+/* Close description fa */
+.close-description{
+	position: absolute;
+	top: 5px;
+	right: 9px;
+	cursor: pointer;
+	background-color: transparent;
+	opacity: .5;
+	font-size: 14px;
+}
+
+.close-description:hover{
+	opacity: 1;
+}
+
+#image-container h1{
 	margin: 0;
 }
 
@@ -431,13 +528,69 @@ header #logo{
 }
 
 
+/* Bottom part of the item container */
 .image-views{
+	width: 100%;
+	height: 30px;
+	margin: 0;
+	padding: 0;
+	border-bottom-left-radius: 3px;
+	border-bottom-right-radius: 3px;
+	overflow: hidden;
+	background-color: #efefef;
+	color: #323232;
+}
+
+.image-views a{
+	display: block;
+	width: 25%;
+	height: 30px;
+	float: left;
+	line-height: 30px;
+	text-align: center;
+	font-size: 13px;
+	cursor: pointer;
+}
+
+.image-views a:last-child{border: none;width: 25%;}
+
+.image-views a:hover{
+	background-color: #ddd;
+}
+
+
+/* NEXT/ PREVIOUS PAGE */
+.prev-next-imgpage{
+	width: 100%;
+	height: 40px;
+	text-align: center;
+	margin-bottom: 20px;
+}
+
+#next-page, #previous-page{
+	display: inline-block;
+	width: 40px;
+	height: 40px;
+	border-radius: 100%;
+	background-color: #323232;
+	color: #efefef;
+	text-align: center;
+	line-height: 40px;
+	opacity: .8;
 
 }
 
-.border-top{
-	border-top: 1px solid #ddd;
+#previous-page{
+	margin-right: 10px;
 }
+
+#next-page:hover, #previous-page:hover{
+	opacity: .5;
+}
+
+
+
+
 
 
 
@@ -617,13 +770,36 @@ header #logo{
 
 
 
+#advertisement{
+	width: 100%;
+	height: 200px;
+	background-color: transparent;
+	margin-bottom: 40px;
+}
 
+#ad-wrap{
+	margin: 0 auto;
+	width: 74%;
+	height: 200px;
+	background-color: transparent;
+}
 
+.ad{
+	width: 43%;
+	height: 200px;
+	border-radius: 3px;
+	background-color: #567567;
+	color: #323232;
+	float: left;
+	font-size: 30px;
+	font-weight: bold;
+	line-height: 200px;
+	text-align: center;
+}
 
-
-
-
-
+.ad:first-child{
+	margin-right: 14%;
+}
 
 
 
@@ -631,7 +807,7 @@ header #logo{
 
 footer{
 	width: 100%;
-	height: 200px;
+	height: 250px;
 	background-color: #efefef;
 	border-top: 1px solid #ccc;
 }
@@ -646,7 +822,7 @@ footer{
 
 /* STUFF TO ADD */
 /* seperate line */
-.line{background-color: #323232;width: 100%;height: 1px;margin: 5px 0;}
+.line{background-color: #ccc;width: 100%;height: 1px;margin: 40px 0;}
 
 
 .arrow-right{
