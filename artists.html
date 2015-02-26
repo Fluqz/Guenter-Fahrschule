@@ -2,252 +2,216 @@
 <html lang="en">
 <head>
 	<meta charset="UTF-8">
-	<title>CMA</title>
+	<title>CMA</title>	
 	<meta name="description" content="This website was built to support artists trying to show their unique art the world. It's a small project of mine, Robin Hlawinka.">
 	<meta name="author" content="Robin Hlawinka">
 
+  	<link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
 </head>
+
 <body>
-	<header>
-		<ul>
-			<li id="logo"><a href="gettingstarted.html">Call Me Artist</a></li>
-			<li class="menu-hoverable"><a href="index.html">Work</a></li>
-			<li class="menu-hoverable current"><a href="#">Artists</a></li>
-			<li class="menu-hoverable"><a href="about.html">About</a></li>
-			<li class="menu-hoverable"><a href="contact.html">Contact</a></li>
-			<li id="media">
+	<div id="login">
+		<div class="close"><i class="fa fa-times"></i></div>
+		<div id="tabs">
+			<div class="front-login log-active">Log in</div>
+			<span>|</span>
+			<div class="front-signup">Sign up</div>
+		</div>		
+		<form action="" method="post" id="loginField">
+			<div class="icon-box"><i class="fa fa-user"></i></div><input type="email" required name="lEmail" placeholder="mail@example.com" id="loginDataInput"/>
+			<div class="icon-box"><i class="fa fa-lock"></i></div><input type="password" required name="password" placeholder="Password"/>
+			<a href="resetPassword.html" style="margin-bottom:10px;">Forgot your password?</a>
+			<button>Log in</button>
+			<a href="createAccount.html">No account yet?</a>
+		</form>
+		<form action="" method="post" id="signupField">
+			<div class="icon-box"><i class="fa fa-user"></i></div><input type="name" required name="name" placeholder="Firstname Lastname" id="signupDataInput"/>
+			<div class="icon-box"><i class="fa fa-envelope"></i></div><input type="email" required name="lEmail" placeholder="mail@example.com"/>
+			<div class="icon-box"><i class="fa fa-unlock-alt"></i></div><input type="password" required name="password" placeholder="Password"/>
+			<div class="icon-box"><i class="fa fa-lock"></i></div><input type="password" required name="confirmPW" placeholder="Confirm password"/>
+			<button>Sign up for free</button>
+		</form>
+	</div>
+
+	<div id="top"><i class="fa fa-chevron-up"></i></div>
+
+
+	<div id="skrollr-body">
+		<header>
+			<div id="inner-header">
+				<div id="logo"></div>
+				<ul>
+					<li><a href="index.html">Work</a></li>
+					<li><a class="current" href="artists.html">Artists</a></li>
+					<li><a href="">About</a></li>
+					<li><a href="">Contact</a></li>
+				</ul>
+				
+				<div id="media">
+					<a id="facebook" class="mediaBtn" target="_blank" href="https://www.facebook.com/pages/Parallax/919993088010924?fref=ts"><i class="fa fa-facebook"></i></a>
+					<a id="google" class="mediaBtn" target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+					<a id="twitter" class="mediaBtn" target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+					<a id="instagram" class="mediaBtn" target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+				</div>
+				<div id="register">
+					<button id="loginBtn">Log in</button>
+					<button id="signupBtn">Sign up</button>				
+				</div>
+			</div>
+		</header>
+		<div id="color-palette"></div>
+
+		
+
+
+
+
+
+		<div id="wrapper">
+			<div id="headline">
+				<h1>Find your favourite Artists</h1>
+				<!--by Skills, location... -->
+				<div class="search-container">
+					<form action="" class="searchbox">
+						<input type="text" class="searchbox-input" placeholder="Find your favourites." name="search" id="search">
+						<button type="submit" class="searchbox-submit" value=""><i class="fa fa-search"></i></button>
+						<span class="searchbox-icon"><i class="fa fa-search"></i></span>
+					</form>				
+				</div>
+			</div>
+
+			<div id="artistList">
+				<ul>
+					<li>
+						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
+						<div class="artistDetails">
+							<a href=""><h1>Robin Hlawinka</h1></a>
+							<div class="location">
+								<i class="fa fa-map-marker"></i>
+								<span>Herrenberg, Germany</span>
+							</div>
+
+							<div class="skills">
+								<span>Skills, experience</span>
+							</div>
+							<div class="age">
+								<span>20 years</span>
+							</div>
+						</div>
+						<div class="exampleArt">
+							<img src="imgs/Ashley_Percival_illustration_art_prints_birds_03.jpg" height="736" width="660">
+							<img src="imgs/celluloid-garden-illustration.jpg" height="1200" width="1600">
+							<img src="imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg" height="736" width="660">
+						</div>
+					</li>
+					<li>
+						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
+						<div class="artistDetails">
+							<a href=""><h1>Robin Hlawinka</h1></a>
+							<div class="location">
+								<i class="fa fa-map-marker"></i>
+								<span>Herrenberg, Germany</span>
+							</div>
+
+							<div class="skills">
+								<span>Skills, experience</span>
+							</div>
+							<div class="age">
+								<span>20 years</span>
+							</div>
+						</div>
+						<div class="exampleArt">
+							<img src="imgs/Ashley_Percival_illustration_art_prints_birds_03.jpg" height="736" width="660">
+							<img src="imgs/celluloid-garden-illustration.jpg" height="1200" width="1600">
+							<img src="imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg" height="736" width="660">
+						</div>
+					</li>
+					<li>
+						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
+						<div class="artistDetails">
+							<a href=""><h1>Robin Hlawinka</h1></a>
+							<div class="location">
+								<i class="fa fa-map-marker"></i>
+								<span>Herrenberg, Germany</span>
+							</div>
+
+							<div class="skills">
+								<span>Skills, experience</span>
+							</div>
+							<div class="age">
+								<span>20 years</span>
+							</div>
+						</div>
+						<div class="exampleArt">
+							<img src="imgs/Ashley_Percival_illustration_art_prints_birds_03.jpg" height="736" width="660">
+							<img src="imgs/celluloid-garden-illustration.jpg" height="1200" width="1600">
+							<img src="imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg" height="736" width="660">
+						</div>
+					</li>
+				</ul>
+				<div class="prev-next-imgpage">
+					<a id="previous-page" href=""><i class="fa fa-chevron-left"></i></a>
+					<a id="next-page" href=""><i class="fa fa-chevron-right"></i></a>
+				</div>
+			</div>
+
+			<div id="searchFilter">
+				<input type="checkbox" id="popular" name="popular" />
+				<label for="popular">Most popular</label>
+				<input type="checkbox" id="newest" name="newest" />
+				<label for="newest">Newest</label>
+			</div>
+
+
+			
+
+			<div class="line"></div>
+
+			<div id="advertisement">
+				<div id="ad-wrap">
+					<div class="ad">This could be your ad!</div>
+					<div class="ad">Your ad here!</div>
+				</div>
+			</div>
+
+		</div><!--wrapper end-->
+		<footer>
+			<div id="footer-header">
+				<ul>
+					<li>Artists</li>
+					<li>Contact</li>
+					<li>About</li>
+					<li>Terms</li>
+				</ul>
+			</div>
+
+			<div id="copyright">
+				<img src="">
+				<span>&copy; 2015 Robin Hlawinka | All pictures &copy; their respective owners</span>
+			</div>
+
+			<div id="media">
 				<a id="facebook" class="mediaBtn" target="_blank" href="https://www.facebook.com/pages/Parallax/919993088010924?fref=ts"><i class="fa fa-facebook"></i></a>
 				<a id="google" class="mediaBtn" target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
 				<a id="twitter" class="mediaBtn" target="_blank" href="#"><i class="fa fa-twitter"></i></a>
 				<a id="instagram" class="mediaBtn" target="_blank" href="#"><i class="fa fa-instagram"></i></a>
-			</li>
-			<li id="menu-footer"><p>&copy; Robin Hlawinka</p></li>
-		</ul>
-	</header>
-	
-	<a id="top"><i class="fa fa-chevron-up"></i></a>
-	
-	<div id="skrollr-body">
-		
-		<div id="content-wrapper">
-			<div id="content">
-				<div class="artist">
-					<div class="artistPortrait"><img src="imgs/placeholder2.png" height="200" width="200"></div>
-					<div class="personal">
-						<h1>Robin Hlawinka</h1>
-						<div class="line"></div>
-
-						<div class="icons">
-							<i class="fa fa-plug"></i>
-							<i class="fa fa-map-marker"></i>
-							<i class="fa fa-paper-plane"></i>
-						</div>
-
-						<div class="infos">
-							<p>20 Years</p>
-							<p>Germany</p>
-							<p><a href="mailto:robin@hlawinka.de">robin@hlawinka.de</a></p>
-						</div>
-					</div>
-					<a class="detail" href="profil.html">Gallery</a>
-				</div>
-				<div class="artist">
-					<div class="artistPortrait"><img src="imgs/placeholder2.png" height="200" width="200"></div>
-					<div class="personal">
-						<h1>Hans Peter</h1>
-						<div class="line"></div>
-
-						<div class="icons">
-							<i class="fa fa-plug"></i>
-							<i class="fa fa-map-marker"></i>
-							<i class="fa fa-paper-plane"></i>
-						</div>
-
-						<div class="infos">
-							<p>40 Years</p>
-							<p>Germany</p>
-							<p><a href="mailto:">hans@peter.com</a></p>
-						</div>
-					</div>
-					<a class="detail" href="profil.html">Gallery</a>
-				</div>
-				<div class="artist">
-					<div class="artistPortrait"><img src="imgs/placeholder2.png" height="200" width="200"></div>
-					<div class="personal">
-						<h1>Dr. P. Lankton</h1>
-						<div class="line"></div>
-
-						<div class="icons">
-							<i class="fa fa-plug"></i>
-							<i class="fa fa-map-marker"></i>
-							<i class="fa fa-paper-plane"></i>
-						</div>
-
-						<div class="infos">
-							<p>25 Years</p>
-							<p>Bikini Bottom</p>
-							<p><a href="mailto:">p@lankton.com</a></p>
-						</div>
-					</div>
-					<a class="detail" href="profil.html">Gallery</a>
-				</div>
-				<div class="artist">
-					<div class="artistPortrait"><img src="imgs/placeholder2.png" height="200" width="200"></div>
-					<div class="personal">
-						<h1>Firstname Lastname</h1>
-						<div class="line"></div>
-
-						<div class="icons">
-							<i class="fa fa-plug"></i>
-							<i class="fa fa-map-marker"></i>
-							<i class="fa fa-paper-plane"></i>
-						</div>
-
-						<div class="infos">
-							<p>100 Years</p>
-							<p>Location</p>
-							<p><a href="mailto:">mail@example.com</a></p>
-						</div>
-					</div>
-					<a class="detail" href="profil.html">Gallery</a>
-				</div>
-				<div class="artist">
-					<div class="artistPortrait"><img src="imgs/placeholder2.png" height="200" width="200"></div>
-					<div class="personal">
-						<h1>Firstname Lastname</h1>
-						<div class="line"></div>
-
-						<div class="icons">
-							<i class="fa fa-plug"></i>
-							<i class="fa fa-map-marker"></i>
-							<i class="fa fa-paper-plane"></i>
-						</div>
-
-						<div class="infos">
-							<p>100 Years</p>
-							<p>Location</p>
-							<p><a href="mailto:">mail@example.com</a></p>
-						</div>
-					</div>
-					<a class="detail" href="profil.html">Gallery</a>
-				</div>
-				<div class="artist">
-					<div class="artistPortrait"><img src="imgs/placeholder2.png" height="200" width="200"></div>
-					<div class="personal">
-						<h1>Firstname Lastname</h1>
-						<div class="line"></div>
-
-						<div class="icons">
-							<i class="fa fa-plug"></i>
-							<i class="fa fa-map-marker"></i>
-							<i class="fa fa-paper-plane"></i>
-						</div>
-
-						<div class="infos">
-							<p>100 Years</p>
-							<p>Location</p>
-							<p><a href="mailto:">mail@example.com</a></p>
-						</div>
-					</div>
-					<a class="detail" href="profil.html">Gallery</a>
-				</div>
-				<div class="artist">
-					<div class="artistPortrait"><img src="imgs/placeholder2.png" height="200" width="200"></div>
-					<div class="personal">
-						<h1>Firstname Lastname</h1>
-						<div class="line"></div>
-
-						<div class="icons">
-							<i class="fa fa-plug"></i>
-							<i class="fa fa-map-marker"></i>
-							<i class="fa fa-paper-plane"></i>
-						</div>
-
-						<div class="infos">
-							<p>100 Years</p>
-							<p>Location</p>
-							<p><a href="mailto:">mail@example.com</a></p>
-						</div>
-					</div>
-					<a class="detail" href="profil.html">Gallery</a>
-				</div>
-				<div class="artist">
-					<div class="artistPortrait"><img src="imgs/placeholder2.png" height="200" width="200"></div>
-					<div class="personal">
-						<h1>Firstname Lastname</h1>
-						<div class="line"></div>
-
-						<div class="icons">
-							<i class="fa fa-plug"></i>
-							<i class="fa fa-map-marker"></i>
-							<i class="fa fa-paper-plane"></i>
-						</div>
-
-						<div class="infos">
-							<p>100 Years</p>
-							<p>Location</p>
-							<p><a href="mailto:">mail@example.com</a></p>
-						</div>
-					</div>
-					<a class="detail" href="profil.html">Gallery</a>
-				</div>
-				<div class="artist">
-					<div class="artistPortrait"><img src="imgs/placeholder2.png" height="200" width="200"></div>
-					<div class="personal">
-						<h1>Firstname Lastname</h1>
-						<div class="line"></div>
-
-						<div class="icons">
-							<i class="fa fa-plug"></i>
-							<i class="fa fa-map-marker"></i>
-							<i class="fa fa-paper-plane"></i>
-						</div>
-
-						<div class="infos">
-							<p>100 Years</p>
-							<p>Location</p>
-							<p><a href="mailto:">mail@example.com</a></p>
-						</div>
-					</div>
-					<a class="detail" href="profil.html">Gallery</a>
-				</div>
-				<div class="artist">
-					<div class="artistPortrait"><img src="imgs/placeholder2.png" height="200" width="200"></div>
-					<div class="personal">
-						<h1>Firstname Lastname</h1>
-						<div class="line"></div>
-
-						<div class="icons">
-							<i class="fa fa-plug"></i>
-							<i class="fa fa-map-marker"></i>
-							<i class="fa fa-paper-plane"></i>
-						</div>
-
-						<div class="infos">
-							<p>100 Years</p>
-							<p>Location</p>
-							<p><a href="mailto:">mail@example.com</a></p>
-						</div>
-					</div>
-					<a class="detail" href="profil.html">Gallery</a>
-				</div>
 			</div>
-		</div>
+		</footer>
+	</div>
 
-
-		<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
-		<script type="text/javascript" src="js/color.js"></script>
-		<script type="text/javascript" src="js/jquery.smooth-scroll.min.js"></script>
-		<script type="text/javascript" src="js/skrollr.min.js"></script>
-		<script type="text/javascript" src="js/skrollr.menu.min.js"></script>
-		<script type="text/javascript" src="js/imagesloaded.js"></script>
-	    <script type="text/javascript" src="js/jquery.unveil.js"></script>
-		<script type="text/javascript" src="js/script.js"></script>
- 	</div>
+	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
+	<script type="text/javascript" src="js/color.js"></script>
+	<script type="text/javascript" src="js/jquery.smooth-scroll.min.js"></script>
+	<script type="text/javascript" src="js/skrollr.min.js"></script>
+	<script type="text/javascript" src="js/skrollr.menu.min.js"></script>
+    <script type="text/javascript" src="js/jquery.slides.min.js"></script>
+	<script type="text/javascript" src="js/imagesloaded.js"></script>
+    <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
+	<script type="text/javascript" src="js/script.js"></script>
 </body>
 </html>

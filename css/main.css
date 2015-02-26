@@ -241,9 +241,12 @@ header #logo{
 }
 
 /* Searchbar */
-.search-container{
+#front-view .search-container{
 	z-index: 1000;
 	width: 25%;
+}
+
+#front-view .search-container{	
 	position: absolute;
 	top: 20px;
 	right: 20px;
@@ -305,6 +308,10 @@ header #logo{
 	color: #313132;
 	font-size: 20px;
 	background-color: #efefef;
+	opacity: .3;
+}
+.searchbox-icon:hover, .searchbox-submit:hover{
+	opacity: .7;
 }
 
 
@@ -385,7 +392,7 @@ header #logo{
 	width: 1200px;
 	margin: 0px auto;
 	overflow: hidden;
-	margin-top: 40px;
+	background-color: #efefef;
 }
 
 /* FILTER */
@@ -394,6 +401,7 @@ header #logo{
 	height: 50px;
 	line-height: 50px;
 	padding: 0px 5%;
+	padding-top: 40px;
 	margin-bottom: 40px;
 }
 
@@ -431,17 +439,28 @@ header #logo{
 .item img{
 	width: 100%;
 	height: auto;
-	border-top-left-radius: 3px;
-	border-top-right-radius: 3px;
+	border-radius: 3px;
 	cursor: pointer;
 	display: block;
+
+	moz-transition: opacity .3s;
+	webkit-transition: opacity .3s;
+	ms-transition: opacity .3s;
+	o-transition: opacity .3s;
+	transition: opacity .3s;
+}
+
+.item img a{
+	display: block;
+	width: 100%;
+	height: auto;
 }
 
 .item img:hover{
 	opacity: 0.7;
 }
 
-.item img:hover+.expand-image{
+.item .image a:hover+.open-close-details{
 	display: block;
 }
 
@@ -450,26 +469,32 @@ header #logo{
 	position: relative;
 }
 
-/* Expand image */
-.expand-image{
+/* Open and close image-details */
+.open-close-details{
 	display: none;
-	width: 25px;
-	height: 25px;
+	width: 100%;
+	height: 30px;
 	text-align: center;
-	line-height: 25px;
+	line-height: 30px;
 	position: absolute;
-	bottom: 3px;
-	right: 3px;
+	bottom: 0px;
+	left: 0px;
 	z-index: 100;
 	background-color: transparent;
 	cursor: pointer;
-	border-radius: 100%;
+
+	moz-transition: all .3s;
+	webkit-transition: all .3s;
+	ms-transition: all .3s;
+	o-transition: all .3s;
+	transition: all .3s;
 }
 
-.expand-image:hover{
+.open-close-details:hover{
 	background: rgba(255,255,255,.5);
 	display: block;
 }
+
 
 
 /* Details */
@@ -529,7 +554,7 @@ header #logo{
 
 
 /* Bottom part of the item container */
-.image-views{
+.image-socials{
 	width: 100%;
 	height: 30px;
 	margin: 0;
@@ -541,7 +566,7 @@ header #logo{
 	color: #323232;
 }
 
-.image-views a{
+.image-socials a{
 	display: block;
 	width: 25%;
 	height: 30px;
@@ -550,12 +575,14 @@ header #logo{
 	text-align: center;
 	font-size: 13px;
 	cursor: pointer;
+	opacity: .6;
 }
 
-.image-views a:last-child{border: none;width: 25%;}
+.image-socials a:last-child{border: none;width: 25%;}
 
-.image-views a:hover{
+.image-socials a:hover{
 	background-color: #ddd;
+	opacity: 1;
 }
 
 
@@ -639,7 +666,7 @@ header #logo{
 	background-color: #efefef;
 	text-align: center;
 	border-radius: 4px;
-	border: 1px solid #ddd;
+	border: 1px solid #ccc;
 	padding-bottom: 10px;
 }
 
@@ -820,9 +847,150 @@ footer{
 
 
 
+
+
+/* ATISTS CSS PAGE */
+#headline .search-container{	
+	z-index: 1000;
+	width: 50%;
+}
+
+#headline{
+	width: 75%;
+	height: 50px;
+	line-height: 50px;
+	margin: 40px 0px;
+	position: relative;
+}
+
+#headline h1{
+	font-size: 25px;
+	margin: 0;
+	margin-left: 20px;
+}
+
+#headline .search-container{
+	position: absolute;
+	top: 5px;
+	right: 0;
+}
+
+
+#artistList{
+	width: 75%;
+	height: auto;
+	display: inline-block;
+}
+
+#artistList ul{
+	width: 100%;
+	height: auto;
+}
+
+#artistList li{
+	width: 100%;
+	height: 110px;
+	border-top: 1px solid #ccc;
+	margin-bottom: 10px;
+}
+
+#artistList li:first-child{border: none;}
+
+#artistList .portrait{
+	display: block;
+	float: left;
+    width: 80px;
+    height: 80px;
+    background-position: center center;
+    background-size: cover;
+    border-radius: 100%;
+    margin: 10px;
+    margin-top: 20px;
+}
+
+#artistList .portrait a{
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+
+#artistList .artistDetails{
+	float: left;	
+	height: 100%;
+	width: 250px;
+	margin-left: 20px;
+	margin-top: 10px;
+}
+
+#artistList .artistDetails h1{
+	margin: 0;
+	font-size: 18px;
+	display: block;
+	margin-top: 10px;
+}
+
+#artistList .artistDetails span, 
+#artistList .artistDetails i{
+	font-size: 15px;
+}
+
+#artistList .exampleArt{
+	height: 100%;
+	float: right;
+	margin-top: 10px;
+}
+
+#artistList .exampleArt img{
+	width: auto;
+	height: 100px;
+}
+
+
+#searchFilter{
+	width: 20%;
+	height: 300px;
+	float: right;
+	background-color: #efefef;
+	border: 1px solid #ccc;
+}
+
+#searchFilter input[type="checkbox"]{
+
+}
+
+#searchFilter input[type="checkbox"] + label{
+	
+}
+
+
+
+
+
+
+
+
+
+
+
+
 /* STUFF TO ADD */
 /* seperate line */
 .line{background-color: #ccc;width: 100%;height: 1px;margin: 40px 0;}
+
+.front-image-like{
+	opacity: 1 !important;
+	color: #FF6347;
+}
+
+.front-image-comment{
+	opacity: 1 !important;
+	color: #FF6347;
+}
+
+.front-image-share{
+	opacity: 1 !important;
+	color: #FF6347;
+}
 
 
 .arrow-right{

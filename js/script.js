@@ -11,7 +11,7 @@ $(document).ready(function(){
 	$loginBtn = $('#loginBtn');
 	$signupBtn = $('#signupBtn');
 	$loginFieldOut = false;
-	$image = $('#image-container img');
+	$showDetails = $('.open-close-details');
 
 	//Masonry
 	var container = document.querySelector('#image-container');
@@ -23,20 +23,20 @@ $(document).ready(function(){
 			itemSelector: '.item'
 		});
 	});
-
-	$image.on('click', function(event) {
-		event.preventDefault();
-		if(!$(this).parent().has(event.target, 'item'))
-			return;
-
-		$(this).parent().next().show();
+	
+	$showDetails.on('click', function(){
+		$(this).parent().next().toggle();
+		$(this).children('i').toggleClass('fa-chevron-down').toggleClass('fa-chevron-up');;
 		msnry.layout();
-	});	
+
+	});
+	
 
 	$('.close-description').on('click', function(event) {
 		event.preventDefault();
 		$(this).parent().hide();
 		msnry.layout();
+		$(this).parent('div .image-details').prev('div .image').children('div .open-close-details').children('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
 	});
 
 	// Slide js
@@ -150,12 +150,6 @@ $(document).ready(function(){
 	    if(sidebar.is(e.target)){
 	        loginField.animate({'top': '-300px'});
 	        $loginFieldOut=false;
-	    }
-
-	    // Close all image details
-	    if(!items.is(e.target)){	    	
-			$('.item .image-details').hide();
-			msnry.layout();
 	    }
 	});
 
