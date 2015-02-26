@@ -605,6 +605,11 @@ header #logo{
 	line-height: 40px;
 	opacity: .8;
 
+	webkit-transition: opacity .2s;
+	moz-transition: opacity .2s;
+	ms-transition: opacity .2s;
+	o-transition: opacity .2s;
+	transition: opacity .2s;
 }
 
 #previous-page{
