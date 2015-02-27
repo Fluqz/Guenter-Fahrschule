@@ -6,12 +6,10 @@
 	<meta name="description" content="This website was built to support artists trying to show their unique art the world. It's a small project of mine, Robin Hlawinka.">
 	<meta name="author" content="Robin Hlawinka">
 
-  	<link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
 	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
-
-	<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
+	<script src="js/modernizr.custom.js"></script>
 </head>
 
 <body>
@@ -96,13 +94,30 @@
 			<div id="filter">
 				<a href="">Digital</a>
 				<a href="">Analog</a>
+
+				<ul id="dropdown">
+					<li><a href=""><span>Recent</span><i class="fa fa-chevron-down"></i></a></li>
+					<ul>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Popular</a></li>
+					</ul>
+				</ul>
+				<ul id="dropdown">
+					<li><a href=""><span>Recent</span><i class="fa fa-chevron-down"></i></a></li>
+					<ul>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Popular</a></li>
+						<li><a href="">Popular</a></li>
+					</ul>
+				</ul>
 			</div>
 
 
 			<div id="image-container">
-				<ul id="grid">
-					<li>
-						<div class="item">
+				<ul id="grid" class="grid effect-2">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_04.jpg" height="606" width="940"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -117,10 +132,10 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
@@ -156,9 +171,54 @@
 
 
 
-
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
+							<div class="image">
+								<a href=""><img id="4" class="gallery image" src="imgs/shark.gif" height="521" width="850"></a>
+								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-socials">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div>
+							<div class="image">
+								<a href=""><img id="4" class="gallery image" src="imgs/airplane.gif" height="300" width="400"></a>
+								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-socials">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/come_to_nothing_illustration_art_print.jpg"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -173,15 +233,38 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image front-image-like"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image front-image-like"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
+							<div class="image">
+								<a href=""><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg"></a>
+								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>			
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similisaepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-socials">
+								<a href="" class="like-image front-image-like"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_02.jpg" height="807" width="660"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -196,15 +279,38 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
+							<div class="image">
+								<a href=""><img id="4" class="gallery image" src="imgs/Impossible_bottles_jungle.gif" height="1047" width="600"></a>
+								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
+							</div>
+							<div class="image-details">
+								<div class="close-description"><i class="fa fa-times-circle"></i></div>
+								<h1 class="image-title">Celluloid Garden</h1>
+								<div class="image-artist">
+									<span>by</span>					
+									<a href=""><h1>Ryan Shivers</h1></a>
+								</div>
+								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
+							</div>
+							<div class="image-socials">
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
+							</div>
+						</div>
+					</li>
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/inspiration-illustration-02.jpg" height="801" width="660"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -219,15 +325,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/soundcity-print.jpg" height="1200" width="1600"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -242,15 +348,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments front-image-comment"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments front-image-comment"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_07.jpg"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -265,15 +371,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/celluloid-garden-illustration.jpg"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -288,17 +394,17 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto, amet.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share front-image-share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share front-image-share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
-								<a href=""><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg"></a>
+								<a href=""><img id="4" class="gallery image" src="imgs/deer.gif" height="667" width="1000"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
 							</div>
 							<div class="image-details">
@@ -311,15 +417,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_03.jpg"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -334,15 +440,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -357,15 +463,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_06.jpg"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -380,15 +486,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/background2.jpg" height="1462" width="2048"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -403,15 +509,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/background.jpg" height="1462" width="2048"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -426,15 +532,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/headerbackground.jpg" height="560" width="960"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -449,15 +555,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/mediahover.png"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -472,15 +578,15 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
-					<li>
-						<div class="item">
+					<li class="item">
+						<div>
 							<div class="image">
 								<a href=""><img id="4" class="gallery image" src="imgs/Ashley_Percival_illustration_art_prints_birds_10.jpg"></a>
 								<div class="open-close-details"><i class="fa fa-chevron-down"></i></div>
@@ -495,10 +601,10 @@
 								<p class="description">The description Lorem ipsum dolor sit amet, consectetur adipisicing elit. A modi sint, laudantium autem similique voluptas! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Assumenda porro est aliquam quia incidunt quae rerum minima placeat, velit inventore animi nostrum error expedita, eveniet recusandae odio saepe eius dolorem quis autem blanditiis fugit iure! Vel sit rem ipsam minima ducimus, ratione saepe voluptas est accusamus, cumque enim iusto minus.</p>
 							</div>
 							<div class="image-socials">
-								<a href="" class="like-image"><i class="fa fa-heart"></i><span> 432</span></a>
-								<a href="" class="comments"><i class="fa fa-comment"></i><span> 6</span></a>
-								<a href="" class="views"><i class="fa fa-eye"></i><span> 123</span></a>
-								<a href="" class="share"><i class="fa fa-share-alt"></i><span> Share</span></a>
+								<a href="" class="like-image"><i class="fa fa-heart"></i><span>432</span></a>
+								<a href="" class="comments"><i class="fa fa-comment"></i><span>6</span></a>
+								<a href="" class="views"><i class="fa fa-eye"></i><span>123</span></a>
+								<a href="" class="share"><i class="fa fa-share-alt"></i><span>Share</span></a>
 							</div>
 						</div>
 					</li>
@@ -549,8 +655,19 @@
 	<script type="text/javascript" src="js/skrollr.min.js"></script>
 	<script type="text/javascript" src="js/skrollr.menu.min.js"></script>
     <script type="text/javascript" src="js/jquery.slides.min.js"></script>
-	<script type="text/javascript" src="js/imagesloaded.js"></script>
+	<script type="text/javascript" src="js/stroll.min.js"></script>
     <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
-	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="js/imagesloaded.js"></script>
+	<script type="text/javascript" src="js/classie.js"></script>
+	<script type="text/javascript" src="js/AnimOnScroll.js"></script>
+		<!--<script>
+			new AnimOnScroll( document.getElementById( 'grid' ), {
+				minDuration : 0.4,
+				maxDuration : 0.7,
+				viewportFactor : 0.2
+			} );
+		</script>-->
+	<script type="text/javascript" src="js/home.js"></script>
+	<script type="text/javascript" src="js/main.js"></script>
 </body>
 </html>
