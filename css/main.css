@@ -343,7 +343,8 @@ header #logo{
 	height: 60px;
 	background-color: transparent; /* PARALAX SCROLLING */
 	text-align: center;
-	border: 1px solid #ccc;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #ccc;
 }
 
 #close-register-ad{
