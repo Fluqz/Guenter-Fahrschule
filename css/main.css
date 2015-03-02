@@ -22,7 +22,8 @@ header{
 }
 
 #inner-header{
-	width: 1200px;
+	width: 70%;
+	min-width: 740px;
 	height: 100%;
 	margin: 0px auto;
 }
@@ -72,7 +73,7 @@ header #logo{
 .current{color: #323232;display: block; opacity: 0.8;}
 
 /* REGISTER BUTTONS */
-#register{
+#user-interface{
 	width: 250px;
 	height: 30px;
 	float: right;
@@ -366,12 +367,15 @@ header #logo{
 	opacity: .8;
 }
 
-#register-ad #register{
-	float: none;
+#register-ad #ad-text{
+	width: 70%;
+	height: 60px;
+	line-height: 60px;
+	margin: 0 auto;
 }
 
-#register a{
-	display: block;
+#register-ad a{
+	display: inline-block;
 	width: 100px;
 	height: 30px;
 	line-height: 30px;
@@ -674,7 +678,7 @@ header #logo{
 
 
 /* NEXT/ PREVIOUS PAGE */
-.prev-next-imgpage{
+.prev-next-pageBtn{
 	width: 100%;
 	height: 40px;
 	text-align: center;
@@ -685,18 +689,18 @@ header #logo{
 	display: inline-block;
 	width: 40px;
 	height: 40px;
-	border-radius: 100%;
-	background-color: #323232;
-	color: #efefef;
+	background-color: transparent;
+	color: #323232;
 	text-align: center;
 	line-height: 40px;
 	opacity: .8;
+	font-size: 20px;
 
-	webkit-transition: opacity .2s;
-	moz-transition: opacity .2s;
-	ms-transition: opacity .2s;
-	o-transition: opacity .2s;
-	transition: opacity .2s;
+	webkit-transition: all .2s;
+	moz-transition: all .2s;
+	ms-transition: all .2s;
+	o-transition: all .2s;
+	transition: all .2s;
 }
 
 #previous-page{
@@ -946,13 +950,8 @@ footer{
 
 
 /* ATISTS CSS PAGE */
-#headline .search-container{	
-	z-index: 1000;
-	width: 350px;
-}
-
 #headline{
-	width: 75%;
+	width: 100%;
 	height: 50px;
 	line-height: 50px;
 	margin: 40px 0px;
@@ -965,15 +964,86 @@ footer{
 	margin-left: 20px;
 }
 
-#headline .search-container{
+/* Searchbar */
+#searchFilter{
+	position: relative;
+	width: 100%;
+	height: 40px;
+	line-height: 40px;
+	background-color: #efefef;
+	margin-bottom: 20px;
+}
+
+#searchFilter .search-container{	
+	z-index: 1000;
+	width: 350px;
+}
+
+#searchFilter .search-container{
 	position: absolute;
-	top: 5px;
-	right: 0;
+	top: 0px;
+	right: 0px;
+}
+
+#searchFilter .filterDiv{
+	width: auto;
+	height: 40px;
+	float: left;
+	margin-left: 20px;
 }
 
 
+/* Radio style */
+#searchFilter .filterDiv input[type="radio"],
+#searchFilter .filterDiv input[type="checkbox"]{
+	display: none;
+}
+
+#searchFilter .filterDiv input[type="radio"] + label,
+#searchFilter .filterDiv input[type="checkbox"] + label{
+	width: 100%;
+	height: 100%;
+	color: #323232;
+	font-size: 14px;
+	cursor: pointer;
+}
+
+#searchFilter .filterDiv input[type="radio"] + label span,
+#searchFilter .filterDiv input[type="checkbox"] + label span{
+	display: inline-block;
+	width: 9px;
+	height: 9px;
+    margin: -3px 4px 0 0;
+	vertical-align: middle;
+	-moz-border-radius: 50%;
+	border-radius: 50%;
+	background-color: transparent;
+	border: 3px solid #ccc;
+}
+
+#searchFilter .filterDiv input[type="radio"]:checked + label span,
+#searchFilter .filterDiv input[type="checkbox"]:checked + label span{
+	background-color: #44889F;
+	border: none;
+	width: 15px;
+	height: 15px;
+}
+
+#searchFilter .filterDiv input[type="radio"] + label span,
+#searchFilter .filterDiv input[type="radio"]:checked + label span,
+#searchFilter .filterDiv input[type="checkbox"] + label span,
+#searchFilter .filterDiv input[type="checkbox"]:checked + label span{
+	-webkit-transition: background-color .5s;
+	-o-transition: background-color .5s;
+	-ms-transition: background-color .5s;
+	-moz-transition: background-color .5s;
+	transition: background-color .5s;
+}
+
+
+/* ARTIST LIST */
 #artistList{
-	width: 75%;
+	width: 100%;
 	height: auto;
 	display: inline-block;
 }
@@ -991,6 +1061,7 @@ footer{
 }
 
 #artistList li:first-child{border: none;}
+#artistList li:last-child{margin-bottom: 40px;}
 
 #artistList .portrait{
 	display: block;
@@ -1012,7 +1083,7 @@ footer{
 
 #artistList .artistDetails{
 	float: left;	
-	height: 100%;
+	height: 90;
 	width: 250px;
 	margin-left: 20px;
 	margin-top: 10px;
@@ -1031,24 +1102,32 @@ footer{
 }
 
 #artistList .exampleArt{
+	width: 370px;
 	height: 100%;
 	float: left;
 	margin-top: 10px;
+	display: flex;
 }
 
-#artistList .exampleArt img{
-	width: auto;
+#artistList .exampleArt .exampleImages{
+	width: 120px;
 	height: 100px;
-}
+	display: inline-block;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: cover;
+	font-size: 0;
+	margin-right: 5px;
 
-
-#searchFilter{
-	width: 20%;
-	height: 300px;
-	float: right;
-	background-color: #efefef;
-	border: 1px solid #ccc;
+	webket-transition: opacity .3s;
+	ms-transition: opacity .3s;
+	moz-transition: opacity .3s;
+	o-transition: opacity .3s;
+	transition: opacity .3s;
 }
+#artistList .exampleArt .exampleImages:last-child{margin-right: 0;}
+#artistList .exampleArt .exampleImages:hover{opacity: .6;}
+
 
 
 
@@ -1088,4 +1167,20 @@ footer{
 	position: absolute;
 	left: 230px;
 	top: 400px;
+}
+
+.loading{
+	width: 100%;
+	height: 100%;
+}
+
+.loading:before{
+	position: absolute;
+	content: '';
+	background-image: url('../imgs/dots.gif');
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%;
+	height: 100%;
+	pointer-events: none;
 }

@@ -3,14 +3,16 @@ $(document).ready(function(){
 
 	$showDetails = $('.open-close-details');
 	var container = document.querySelector('#image-container');
-	var msnry;
-
-	imagesLoaded(container, function(){
-		msnry = new Masonry( container, {
+	$imageContainer = $('#image-container');
+	var msnry = new Masonry( container, {
 			itemSelector: '.item',
 			columnWidth: '.item',
-		    gutter: 10
-		});
+		    gutter: 10,
+	});
+
+
+	imagesLoaded(container, function(){
+		msnry.layout();
 	});
 	
 	/*new AnimOnScroll( document.getElementById( 'grid' ), {
