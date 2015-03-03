@@ -11,6 +11,9 @@ $(document).ready(function(){
 	$loginBtn = $('#loginBtn');
 	$signupBtn = $('#signupBtn');
 	$loginFieldOut = false;
+	$getInfo = $('.getInfobox');
+	$infoBox = $('.info-box');
+	$infoArrow = $('.info-arrow-down');
 
 
 	// Get window sizes 
@@ -165,6 +168,16 @@ $(document).ready(function(){
 			submitIcon.click();
 		}
 	});
+
+
+	$getInfo.bind('mouseover', function(event) {
+		createInfobox($(this));
+	});
+
+	$getInfo.bind('mouseleave', function(event) {
+		$infoBox.stop(false, false).fadeOut(150);
+	});
+
 });
 
 function filled(){
@@ -187,4 +200,35 @@ function buttonUp(){
 		$('.searchbox-input').val('');
 		$('.searchbox-icon').css('display', 'block');
 	}
+}
+
+function createInfobox(jqElement){
+	var offset = jqElement.offset();
+	var offsetTop,
+		offsetLeft,
+		arrowOffsetLeft,
+		infoArrowHeight = 7,
+		infoArrowWidth = 6,
+		infoBoxHeight = Math.floor($infoBox.height()),
+		infoBoxWidth = $infoBox.width(),
+		infoEleHeight = Math.floor(jqElement.height()),
+		infoEleWidth = Math.floor(jqElement.width()),
+		arrowUpPos = -6,
+		arrowDownPos = -6;
+
+	offsetTop = offset.top - (infoBoxHeight + 20) - infoArrowHeight;
+	offsetLeft = (offset.left + (infoEleWidth / 2)) - (infoBoxWidth / 2) - 11;
+	arrowOffsetLeft = (infoBoxWidth / 2) + infoArrowWidth;
+
+	if(offsetTop <= 0){
+		offsetTop = offset.top + infoEleHeight + infoArrowHeight;
+		$infoArrow.removeClass('info-arrow-down').addClass('info-arrow-up');
+	}
+	else{
+		if($infoArrow.hasClass('info-arrow-up'))
+			$infoArrow.removeClass('info-arrow-up').addClass('info-arrow-down');
+	}
+	
+	$infoBox.css({'top': offsetTop + 'px', 'left': offsetLeft + 'px'}).stop(false, false).fadeIn(150);
+	$infoArrow.css('left', arrowOffsetLeft + 'px');
 }

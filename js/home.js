@@ -41,14 +41,6 @@ $(document).ready(function(){
 		$(this).parent('div .image-details').prev('div .image').children('div .open-close-details').children('i').removeClass('fa-chevron-up').addClass('fa-chevron-down');
 	});
 
-	// Slide js
-	$('#slides').slidesjs({
-		width: 600,
-		height: 400
-	});
-
 	// Front gif anchor scrolling
 	$('#front-animation a').smoothScroll();
-
-
 });

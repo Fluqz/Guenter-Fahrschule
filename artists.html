@@ -15,33 +15,44 @@
 </head>
 
 <body>
-	<div id="login">
-		<div class="close"><i class="fa fa-times"></i></div>
-		<div id="tabs">
-			<div class="front-login log-active">Log in</div>
-			<span>|</span>
-			<div class="front-signup">Sign up</div>
-		</div>		
-		<form action="" method="post" id="loginField">
-			<div class="icon-box"><i class="fa fa-user"></i></div><input type="email" required name="lEmail" placeholder="mail@example.com" id="loginDataInput"/>
-			<div class="icon-box"><i class="fa fa-lock"></i></div><input type="password" required name="password" placeholder="Password"/>
-			<a href="resetPassword.html" style="margin-bottom:10px;">Forgot your password?</a>
-			<button>Log in</button>
-			<a href="createAccount.html">No account yet?</a>
-		</form>
-		<form action="" method="post" id="signupField">
-			<div class="icon-box"><i class="fa fa-user"></i></div><input type="name" required name="name" placeholder="Firstname Lastname" id="signupDataInput"/>
-			<div class="icon-box"><i class="fa fa-envelope"></i></div><input type="email" required name="lEmail" placeholder="mail@example.com"/>
-			<div class="icon-box"><i class="fa fa-unlock-alt"></i></div><input type="password" required name="password" placeholder="Password"/>
-			<div class="icon-box"><i class="fa fa-lock"></i></div><input type="password" required name="confirmPW" placeholder="Confirm password"/>
-			<button>Sign up for free</button>
-		</form>
-	</div>
 
 	<div id="top"><i class="fa fa-chevron-up"></i></div>
 
 
 	<div id="skrollr-body">
+		<div class="info-box">
+			Infobox Lorem ipsum dolor sit amet, consectetur adipisicing elit. Perferendis pariatur nu
+			<div class="info-arrow-down"></div>
+		</div>
+
+
+
+
+
+		<div id="login">
+			<div class="close"><i class="fa fa-times"></i></div>
+			<div id="tabs">
+				<div class="front-login log-active">Log in</div>
+				<span>|</span>
+				<div class="front-signup">Sign up</div>
+			</div>		
+			<form action="" method="post" id="loginField">
+				<div class="icon-box"><i class="fa fa-user"></i></div><input type="email" required name="lEmail" placeholder="mail@example.com" id="loginDataInput"/>
+				<div class="icon-box"><i class="fa fa-lock"></i></div><input type="password" required name="password" placeholder="Password"/>
+				<a href="resetPassword.html" style="margin-bottom:10px;">Forgot your password?</a>
+				<button>Log in</button>
+				<a href="createAccount.html">No account yet?</a>
+			</form>
+			<form action="" method="post" id="signupField">
+				<div class="icon-box"><i class="fa fa-user"></i></div><input type="name" required name="name" placeholder="Firstname Lastname" id="signupDataInput"/>
+				<div class="icon-box"><i class="fa fa-envelope"></i></div><input type="email" required name="lEmail" placeholder="mail@example.com"/>
+				<div class="icon-box"><i class="fa fa-unlock-alt"></i></div><input type="password" required name="password" placeholder="Password"/>
+				<div class="icon-box"><i class="fa fa-lock"></i></div><input type="password" required name="confirmPW" placeholder="Confirm password"/>
+				<button>Sign up for free</button>
+			</form>
+		</div>
+
+
 		<header>
 			<div id="inner-header">
 				<div id="logo"></div>
@@ -58,7 +69,7 @@
 					<a id="twitter" class="mediaBtn" target="_blank" href="#"><i class="fa fa-twitter"></i></a>
 					<a id="instagram" class="mediaBtn" target="_blank" href="#"><i class="fa fa-instagram"></i></a>
 				</div>
-				<div id="register">
+				<div id="user-interface">
 					<button id="loginBtn">Log in</button>
 					<button id="signupBtn">Sign up</button>				
 				</div>
@@ -67,7 +78,7 @@
 		<div id="color-palette"></div>
 
 		
-
+	
 
 
 
@@ -88,14 +99,14 @@
 					<input type="radio" id="newest" class="radio" name="radio" />
 					<label for="newest"><span></span>Newest</label>
 				</div>
-				<div class="filterDiv">
+				<div class="filterDiv getInfobox">
 					<input type="checkbox" id="hasEmail" class="checkbox" name="hasEmail" />
 					<label for="hasEmail"><span></span>with E-mail</label>
 				</div>	
 
 				<div class="search-container">
 					<form action="" class="searchbox">
-						<input type="text" class="searchbox-input" placeholder="Find your favourites." name="search" id="search">
+						<input type="text" class="searchbox-input" placeholder="Find your favourites" name="search" id="search">
 						<button type="submit" class="searchbox-submit" value=""><i class="fa fa-search"></i></button>
 						<span class="searchbox-icon"><i class="fa fa-search"></i></span>
 					</form>				
@@ -108,10 +119,15 @@
 					<li>
 						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
 						<div class="artistDetails">
-							<a href=""><h1>Robin Hlawinka</h1></a>
+							<div class="artistName">
+								<a href="profile.html"><h1>Robin Hlawinka</h1></a>
+								<a class="getInfobox hasMail" href="profile.html"><i class="fa fa-envelope"></i></a>
+							</div>
 							<div class="location">
-								<i class="fa fa-map-marker"></i>
-								<span>Herrenberg, Germany</span>
+								<a href="map.html">
+									<i class="fa fa-map-marker"></i>
+									<span>Herrenberg, Germany</span>
+								</a>
 							</div>
 
 							<div class="skills">
@@ -130,10 +146,15 @@
 					<li>
 						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
 						<div class="artistDetails">
-							<a href=""><h1>Robin Hlawinka</h1></a>
+							<div class="artistName">
+								<a href="profile.html"><h1>Robin Hlawinka</h1></a>
+								<a class="getInfobox hasMail" href="profile.html"><i class="fa fa-envelope"></i></a>
+							</div>
 							<div class="location">
-								<i class="fa fa-map-marker"></i>
-								<span>Herrenberg, Germany</span>
+								<a href="map.html">
+									<i class="fa fa-map-marker"></i>
+									<span>Herrenberg, Germany</span>
+								</a>
 							</div>
 
 							<div class="skills">
@@ -152,10 +173,15 @@
 					<li>
 						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
 						<div class="artistDetails">
-							<a href=""><h1>Robin Hlawinka</h1></a>
+							<div class="artistName">
+								<a href="profile.html"><h1>Robin Hlawinka</h1></a>
+								<a class="getInfobox hasMail" href="profile.html"><i class="fa fa-envelope"></i></a>
+							</div>
 							<div class="location">
-								<i class="fa fa-map-marker"></i>
-								<span>Herrenberg, Germany</span>
+								<a href="map.html">
+									<i class="fa fa-map-marker"></i>
+									<span>Herrenberg, Germany</span>
+								</a>
 							</div>
 
 							<div class="skills">
@@ -168,6 +194,191 @@
 						<div class="exampleArt">
 							<a href="" class="exampleImages" style="background-image: url('imgs/shark.gif');"></a>
 							<a href="" class="exampleImages" style="background-image: url('imgs/background.jpg');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg');"></a>
+						</div>
+					</li>
+					<li>
+						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
+						<div class="artistDetails">
+							<div class="artistName">
+								<a href="profile.html"><h1>Robin Hlawinka</h1></a>
+							</div>
+							<div class="location">
+								<a href="map.html">
+									<i class="fa fa-map-marker"></i>
+									<span>Herrenberg, Germany</span>
+								</a>
+							</div>
+
+							<div class="skills">
+								<span>Skills, experience</span>
+							</div>
+							<div class="age">
+								<span>20 years</span>
+							</div>
+						</div>
+						<div class="exampleArt">
+							<a href="" class="exampleImages" style="background-image: url('imgs/deer.gif');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/celluloid-garden-illustration.jpg');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg');"></a>
+						</div>
+					</li>
+					<li>
+						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
+						<div class="artistDetails">
+							<div class="artistName">
+								<a href="profile.html"><h1>Robin Hlawinka</h1></a>
+								<a class="getInfobox hasMail" href="profile.html"><i class="fa fa-envelope"></i></a>
+							</div>
+							<div class="location">
+								<a href="map.html">
+									<i class="fa fa-map-marker"></i>
+									<span>Herrenberg, Germany</span>
+								</a>
+							</div>
+
+							<div class="skills">
+								<span>Skills, experience</span>
+							</div>
+							<div class="age">
+								<span>20 years</span>
+							</div>
+						</div>
+						<div class="exampleArt">
+							<a href="" class="exampleImages" style="background-image: url('imgs/deer.gif');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/celluloid-garden-illustration.jpg');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg');"></a>
+						</div>
+					</li>
+					<li>
+						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
+						<div class="artistDetails">
+							<div class="artistName">
+								<a href="profile.html"><h1>Robin Hlawinka</h1></a>
+							</div>
+							<div class="location">
+								<a href="map.html">
+									<i class="fa fa-map-marker"></i>
+									<span>Herrenberg, Germany</span>
+								</a>
+							</div>
+
+							<div class="skills">
+								<span>Skills, experience</span>
+							</div>
+							<div class="age">
+								<span>20 years</span>
+							</div>
+						</div>
+						<div class="exampleArt">
+							<a href="" class="exampleImages" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_06.jpg');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_06.jpg');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg');"></a>
+						</div>
+					</li>
+					<li>
+						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
+						<div class="artistDetails">
+							<div class="artistName">
+								<a href="profile.html"><h1>Robin Hlawinka</h1></a>
+								<a class="getInfobox hasMail" href="profile.html"><i class="fa fa-envelope"></i></a>
+							</div>
+							<div class="location">
+								<a href="map.html">
+									<i class="fa fa-map-marker"></i>
+									<span>Herrenberg, Germany</span>
+								</a>
+							</div>
+
+							<div class="skills">
+								<span>Skills, experience</span>
+							</div>
+							<div class="age">
+								<span>20 years</span>
+							</div>
+						</div>
+						<div class="exampleArt">
+							<a href="" class="exampleImages" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_10.jpg');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/celluloid-garden-illustration.jpg');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg');"></a>
+						</div>
+					</li>
+					<li>
+						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
+						<div class="artistDetails">
+							<div class="artistName">
+								<a href="profile.html"><h1>Robin Hlawinka</h1></a>
+							</div>
+							<div class="location">
+								<a href="map.html">
+									<i class="fa fa-map-marker"></i>
+									<span>Herrenberg, Germany</span>
+								</a>
+							</div>
+
+							<div class="skills">
+								<span>Skills, experience</span>
+							</div>
+							<div class="age">
+								<span>20 years</span>
+							</div>
+						</div>
+						<div class="exampleArt">
+							<a href="" class="exampleImages" style="background-image: url('imgs/Impossible_bottles_jungle.gif');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/come_to_nothing_illustration_art_print.jpg');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg');"></a>
+						</div>
+					</li>
+					<li>
+						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
+						<div class="artistDetails">
+							<div class="artistName">
+								<a href="profile.html"><h1>Robin Hlawinka</h1></a>
+							</div>
+							<div class="location">
+								<a href="map.html">
+									<i class="fa fa-map-marker"></i>
+									<span>Herrenberg, Germany</span>
+								</a>
+							</div>
+
+							<div class="skills">
+								<span>Skills, experience</span>
+							</div>
+							<div class="age">
+								<span>20 years</span>
+							</div>
+						</div>
+						<div class="exampleArt">
+							<a href="" class="exampleImages" style="background-image: url('imgs/deer.gif');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/background2.jpg');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/inspiration-illustration-02.jpg');"></a>
+						</div>
+					</li>
+					<li>
+						<div class="portrait" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"><a href=""></a></div>
+						<div class="artistDetails">
+							<div class="artistName">
+								<a href="profile.html"><h1>Robin Hlawinka</h1></a>
+								<a class="getInfobox hasMail" href="profile.html"><i class="fa fa-envelope"></i></a>
+							</div>
+							<div class="location">
+								<a href="map.html">
+									<i class="fa fa-map-marker"></i>
+									<span>Herrenberg, Germany</span>
+								</a>
+							</div>
+
+							<div class="skills">
+								<span>Skills, experience</span>
+							</div>
+							<div class="age">
+								<span>20 years</span>
+							</div>
+						</div>
+						<div class="exampleArt">
+							<a href="" class="exampleImages" style="background-image: url('imgs/background2.jpg');"></a>
+							<a href="" class="exampleImages" style="background-image: url('imgs/celluloid-garden-illustration.jpg');"></a>
 							<a href="" class="exampleImages" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_05.jpg');"></a>
 						</div>
 					</li>
@@ -226,5 +437,10 @@
 	<script type="text/javascript" src="js/imagesloaded.js"></script>
     <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function(){
+			$('.searchbox-icon').trigger('click');
+		});
+	</script>
 </body>
 </html>

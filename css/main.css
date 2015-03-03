@@ -29,8 +29,9 @@ header{
 }
 
 header ul{
-	width: 360px;
+	width: auto;
 	display: inline-block;
+	margin-left: 20%;
 }
 
 header ul li{
@@ -66,7 +67,6 @@ header #logo{
 	background-color: #323232;
 	float: left;
 	margin-top: 5px;
-	margin-right: 15%;
 }
 
 /* On current page */
@@ -74,7 +74,7 @@ header #logo{
 
 /* REGISTER BUTTONS */
 #user-interface{
-	width: 250px;
+	width: auto;
 	height: 30px;
 	float: right;
 	margin-top: 15px;
@@ -519,7 +519,6 @@ header #logo{
 .item img{
 	width: 100%;
 	height: auto;
-	border-radius: 3px;
 	cursor: pointer;
 	display: block;
 
@@ -529,9 +528,9 @@ header #logo{
 	o-transition: opacity .3s;
 	transition: opacity .3s;
 
-	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	/*-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
 	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
-	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);*/
 }
 
 .item img a{
@@ -653,7 +652,7 @@ header #logo{
 	color: #323232;
 }
 
-.image-socials a{
+.image-socials a, .image-socials .views{
 	display: block;
 	width: 25%;
 	height: 30px;
@@ -667,7 +666,7 @@ header #logo{
 
 .image-socials a:last-child{border: none;width: 25%;}
 
-.image-socials a:hover{
+.image-socials a:hover, .image-socials .views:hover{
 	background-color: #ddd;
 	opacity: 1;
 }
@@ -675,6 +674,7 @@ header #logo{
 .image-socials span{
 	margin-left: 5px;
 }
+
 
 
 /* NEXT/ PREVIOUS PAGE */
@@ -724,8 +724,8 @@ header #logo{
 	position: fixed;
 	bottom: 15px;
 	right: 15px;
-	background-color: #323232;
-	color: #FF6347;
+	background-color: #588C7E;
+	color: #323232;
 	width: 50px;
 	height: 48px;
 	text-align: center;
@@ -733,9 +733,15 @@ header #logo{
 	padding-bottom: 2px;
 	border-radius: 100px;
 	cursor: pointer;
+
+
+	-moz-box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 1px 2px rgba(0,0,0,0.35);
+	-webkit-box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 1px 2px rgba(0,0,0,0.35);
+	box-shadow: 0 1px 3px rgba(0,0,0,0.30), 0 1px 2px rgba(0,0,0,0.35);
 }
 
-#top:hover{background-color: #222;}
+#top:hover{opacity: .9;}
+#top:active{box-shadow: none;}
 
 
 
@@ -1011,33 +1017,33 @@ footer{
 #searchFilter .filterDiv input[type="radio"] + label span,
 #searchFilter .filterDiv input[type="checkbox"] + label span{
 	display: inline-block;
-	width: 9px;
-	height: 9px;
+	width: 8px;
+	height: 8px;
     margin: -3px 4px 0 0;
 	vertical-align: middle;
 	-moz-border-radius: 50%;
 	border-radius: 50%;
 	background-color: transparent;
-	border: 3px solid #ccc;
+	border: 2px solid #ccc;
 }
 
 #searchFilter .filterDiv input[type="radio"]:checked + label span,
 #searchFilter .filterDiv input[type="checkbox"]:checked + label span{
 	background-color: #44889F;
 	border: none;
-	width: 15px;
-	height: 15px;
+	width: 12px;
+	height: 12px;
 }
 
 #searchFilter .filterDiv input[type="radio"] + label span,
 #searchFilter .filterDiv input[type="radio"]:checked + label span,
 #searchFilter .filterDiv input[type="checkbox"] + label span,
 #searchFilter .filterDiv input[type="checkbox"]:checked + label span{
-	-webkit-transition: background-color .5s;
-	-o-transition: background-color .5s;
-	-ms-transition: background-color .5s;
-	-moz-transition: background-color .5s;
-	transition: background-color .5s;
+	-webkit-transition: background-color .1s;
+	-o-transition: background-color .1s;
+	-ms-transition: background-color .1s;
+	-moz-transition: background-color .1s;
+	transition: background-color .1s;
 }
 
 
@@ -1048,11 +1054,14 @@ footer{
 	display: inline-block;
 }
 
+/* Whole list */
 #artistList ul{
 	width: 100%;
 	height: auto;
 }
 
+
+/* Single item */
 #artistList li{
 	width: 100%;
 	height: 110px;
@@ -1060,6 +1069,7 @@ footer{
 	margin-bottom: 10px;
 }
 
+/* Cut borders beginning / end*/
 #artistList li:first-child{border: none;}
 #artistList li:last-child{margin-bottom: 40px;}
 
@@ -1075,12 +1085,14 @@ footer{
     margin-top: 20px;
 }
 
+/* Profile picture */
 #artistList .portrait a{
 	display: block;
 	width: 100%;
 	height: 100%;
 }
 
+/* Details */
 #artistList .artistDetails{
 	float: left;	
 	height: 90;
@@ -1089,18 +1101,57 @@ footer{
 	margin-top: 10px;
 }
 
-#artistList .artistDetails h1{
-	margin: 0;
-	font-size: 18px;
-	display: block;
-	margin-top: 10px;
+
+#artistList .artistDetails h1,
+#artistList .artistDetails a,
+#artistList .artistDetails span,
+#artistList .artistDetails i{
+	opacity: .9;
 }
 
-#artistList .artistDetails span, 
-#artistList .artistDetails i{
+/* Details hover */
+#artistList .artistDetails h1:hover,
+#artistList .artistDetails a:hover,
+#artistList .artistDetails span:hover,
+#artistList .artistDetails i:hover{
+	opacity: 1;
+}
+
+#artistList .artistDetails a,
+#artistList .artistDetails span,
+#artistList .artistDetails a span{
+	font-size: 15px;
+	font-weight: normal;
+}
+
+/* Profile Name */
+#artistList .artistDetails .artistName{	
+	margin-top: 11px;
+	width: auto;
+	height: 22px;
+}
+
+#artistList .artistDetails .artistName h1{
+	margin: 0;
+	font-size: 18px;
+}
+
+#artistList .artistDetails .artistName a{
+	margin: 0;
+	display: inline-block;
+}
+
+
+#artistList .artistDetails .artistName .fa-envelope{
 	font-size: 15px;
 }
 
+/* Hover over mail icon */
+.hasMail:hover{
+	color: #FF6347;
+}
+
+/* Example picture div */
 #artistList .exampleArt{
 	width: 370px;
 	height: 100%;
@@ -1109,6 +1160,7 @@ footer{
 	display: flex;
 }
 
+/* Example pictures */
 #artistList .exampleArt .exampleImages{
 	width: 120px;
 	height: 100px;
@@ -1133,6 +1185,16 @@ footer{
 
 
 
+
+
+
+
+
+
+
+
+
+/* PROFILE CSS PAGE--------------------------------------------------------------------------- */
 
 
 
@@ -1183,4 +1245,48 @@ footer{
 	width: 100%;
 	height: 100%;
 	pointer-events: none;
+}
+
+.info-box{
+	z-index: 99999;
+	position: absolute;
+	display: none;
+	width: 200px;
+	height: auto;
+	padding: 10px 15px;
+	background-color: #323232;
+	color: #efefef;
+	border-radius: 3px;
+	font-size: 15px;
+	opacity: .9;
+
+	-moz-box-shadow: 0 0 5px #888;
+	-webkit-box-shadow: 0 0 5px#888;
+	box-shadow: 0 0 5px #888;
+}
+
+.info-arrow-down{
+	z-index: 9999999;
+	width: 0px;
+	height: 0px;
+	content: '';
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	border-top: 7px solid #323232;
+	position: absolute;
+	left: 0px;
+	bottom: -6px;
+}
+
+.info-arrow-up{
+	z-index: 9999999;
+	width: 0px;
+	height: 0px;
+	content: '';
+	border-right: 6px solid transparent;
+	border-left: 6px solid transparent;
+	border-bottom: 7px solid #323232;
+	position: absolute;
+	left: 0px;
+	top: -6px;
 }
