@@ -14,17 +14,23 @@ $(document).ready(function(){
 	$getInfo = $('.getInfobox');
 	$infoBox = $('.info-box');
 	$infoArrow = $('.info-arrow-down');
+	$footer = $('footer');
 
+	$content.imagesLoaded(function(){		
+		getSize();
+	});
 
 	// Get window sizes 
 	function getSize(){
-		winH = $window.height();
-		winW = $window.width();
+		var winH = $window.height();
+		var winW = $window.width();
 
 
-		if(winH >= 500){
-			// FOOTER ABSOLUTE
+		if(winH <= 600){
+			winH = 600;
 		}
+
+		$footer.height(winH);
 	}
 	
 	// resize on resize
@@ -33,22 +39,33 @@ $(document).ready(function(){
 	});
 
 
+	// Detect Adblock
+	/*if (document.getElementById("tester") == undefined){ 
+		document.write(' TEXT TO DISPLAY IF ADBLOCK IS ACTIVE');
+	}*/
 
 
 	// Fade in/out #top button
 	$window.scroll(function(){
-	    if ($(this).scrollTop()){
+	    if ($(this).scrollTop()/* && $(this).scrollTop() + $footer.height() - 100 < $footer.offset().top*/){
 	        $('#top:hidden').stop(true, true).fadeIn('fast');
 	    } else {
 	        $scrollToTop.stop(true, true).fadeOut('fast');
 	    }
+
+	    if($window.scrollTop() + $window.height() >= $(document).height() -50){
+			$('#footer-header').stop(false, false).animate({'bottom': '0px'}, 200);
+		}
+		else if($window.scrollTop() + $window.height() < $(document).height()){
+			$('#footer-header').stop(false, true).animate({'bottom': '-60px'}, 200);
+		}
 	});
 
 	// Smooth scroll on #top
-	$scrollToTop.on('click', function(event){
-		event.preventDefault();
-		$('html, body').animate({scrollTop:0}, 1000);
-	});
+	$scrollToTop.smoothScroll();
+	$('#footer-logo').smoothScroll();
+	$('#footer-content .chevron').smoothScroll();
+
 
 
 	// Show login form
@@ -169,7 +186,7 @@ $(document).ready(function(){
 		}
 	});
 
-
+	// Infobox
 	$getInfo.bind('mouseover', function(event) {
 		createInfobox($(this));
 	});
@@ -217,7 +234,7 @@ function createInfobox(jqElement){
 		arrowDownPos = -6;
 
 	offsetTop = offset.top - (infoBoxHeight + 20) - infoArrowHeight;
-	offsetLeft = (offset.left + (infoEleWidth / 2)) - (infoBoxWidth / 2) - 11;
+	offsetLeft = (offset.left + (infoEleWidth / 2)) - (infoBoxWidth / 2) - 12;
 	arrowOffsetLeft = (infoBoxWidth / 2) + infoArrowWidth;
 
 	if(offsetTop <= 0){

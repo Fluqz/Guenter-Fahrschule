@@ -7,6 +7,7 @@ $(document).ready(function(){
 	$buttonOverview = $('#goToContent');
 	$buttonExplore = $('#explore');
 	$loadingScreen = $('.loading');
+	$footer = $('footer');
 
 	$overview.imagesLoaded(function(){
 		resizeWindow();
@@ -27,6 +28,7 @@ $(document).ready(function(){
 
 		$overview.height(windowHeight);
 		$buttonOverview.css({top: windowHeight - 70, left: (windowWidth / 2) - 25});
+		$footer.height(windowHeight);
 	}
 
 
@@ -42,6 +44,14 @@ $(document).ready(function(){
 	        $('#explore-circle').stop(true, true).fadeOut(100);
 	    else
 	        $('#explore-circle:hidden').stop(true, true).fadeIn(100);
+
+
+	    if($window.scrollTop() + $window.height() >= $(document).height() -50){
+			$('#footer-header').stop(false, false).animate({'bottom': '0px'}, 200);
+		}
+		else if($window.scrollTop() + $window.height() < $(document).height()){
+			$('#footer-header').stop(false, true).animate({'bottom': '-60px'}, 200);
+		}
 	});
 
 

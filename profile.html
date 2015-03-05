@@ -9,7 +9,8 @@
   	<link rel="import" href="http://www.polymer-project.org/components/paper-ripple/paper-ripple.html">
 	<link rel="stylesheet" type="text/css" href="css/normalize.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.2.0/css/font-awesome.min.css">
+	<style type="text/css">#color-palette{background-color: #323232;border-bottom: 1px solid #ddd;}</style>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome-4.3.0/css/font-awesome.min.css">
 
 	<link href='http://fonts.googleapis.com/css?family=Comfortaa:400,700,300' rel='stylesheet' type='text/css'>
 </head>
@@ -70,18 +71,34 @@
 					<a id="instagram" class="mediaBtn" target="_blank" href="#"><i class="fa fa-instagram"></i></a>
 				</div>
 				<div id="user-interface">
-					<button id="loginBtn">Log in</button>
-					<button id="signupBtn">Sign up</button>				
+					<button class="loggedIn" id="loginBtn">Log in</button>
+					<button class="loggedIn" id="signupBtn">Sign up</button>				
 				</div>
 			</div>
 		</header>
 		<div id="color-palette">
-			
+			<div id="palette-menu">
+				<ul>
+					<li>200 Pictures</li>
+					<li><a href="">53 Followers</a></li>
+				</ul>
+				<button id="follow-artist">Follow</button>
+			</div>
 		</div>
+
+		<div id="profile-image" style="background-image: url('imgs/Ashley_Percival_illustration_art_prints_birds_08.jpg')"></div>
+		<div id="profile-image-overlay"></div>
 
 		
 	
 		<div id="wrapper">
+			<div id="profile-information">
+				<a id="profile-name" href="">Robin Hlawinka</a>
+				<div id="profile-description"><p>Hi this is me in outer space and outer space with me. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Optio tenetur ratione amet voluptate rem voluptatum deleniti.</p></div>
+			</div>
+			<div class="line"></div>
+
+
 			<div id="image-container">
 				<ul id="grid" class="grid effect-2">
 					<li class="item">
@@ -135,27 +152,39 @@
 			
 
 		<footer>
-			<div id="footer-header">
-				<ul>
-					<li>Artists</li>
-					<li>Contact</li>
-					<li>About</li>
-					<li>Terms</li>
-				</ul>
-			</div>
+			<div id="footer-content">
+				<a href="#inner-header" class="chevron"><i class="fa fa-angle-double-up"></i></a>
+				<div id="footer-logo"></div>			
+				
 
-			<div id="copyright">
-				<img src="">
-				<span>&copy; 2015 Robin Hlawinka | All pictures &copy; their respective owners</span>
-			</div>
+				<div id="copyright">
+					<p class="unselectable">This website is made for artists</p>
+					<p class="unselectable">All rights reserved their respective owners</p>
+					<p class="unselectable">2015 Robin Hlawinka</p>
+				</div>
 
-			<div id="media">
-				<a id="facebook" class="mediaBtn" target="_blank" href="https://www.facebook.com/pages/Parallax/919993088010924?fref=ts"><i class="fa fa-facebook"></i></a>
-				<a id="google" class="mediaBtn" target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
-				<a id="twitter" class="mediaBtn" target="_blank" href="#"><i class="fa fa-twitter"></i></a>
-				<a id="instagram" class="mediaBtn" target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+
+				<div id="footer-media">
+					<a id="facebook" class="mediaBtn getInfobox hoverable" target="_blank" href="https://www.facebook.com/pages/Parallax/919993088010924?fref=ts"><i class="fa fa-facebook"></i></a>
+					<a id="google" class="mediaBtn getInfobox hoverable" target="_blank" href="#"><i class="fa fa-google-plus"></i></a>
+					<a id="twitter" class="mediaBtn getInfobox hoverable" target="_blank" href="#"><i class="fa fa-twitter"></i></a>
+					<a id="instagram" class="mediaBtn getInfobox hoverable" target="_blank" href="#"><i class="fa fa-instagram"></i></a>
+				</div>
+				
+				<a href="" id="footer-donation" class="getInfobox hoverable"><i class="fa fa-heartbeat"></i></a>
 			</div>
 		</footer>
+	</div> <!-- Skrollr end -->
+
+	<div id="footer-header">
+		<ul>
+			<li><a href="index.html">Work</a>
+			</li><li><a href="artists.html">Artists</a>
+			</li><li><a href="">Contact</a>
+			</li><li><a href="">About</a>
+			</li><li><a href="">Terms</a>
+			</li>
+		</ul>
 	</div>
 
 	<script type="text/javascript" src="js/jquery-1.11.1.min.js"></script>
@@ -168,5 +197,11 @@
     <script type="text/javascript" src="js/masonry.pkgd.min.js"></script>
     <script type="text/javascript" src="js/home.js"></script>
 	<script type="text/javascript" src="js/main.js"></script>
+	<script type="text/javascript">		
+		$('#color-palette').animate({'height': '100px'}, 400);
+		$('#palette-menu').fadeIn();
+		$('#profile-image').animate({'height': '100px', 'width': '100px'});
+		$('#profile-image-overlay').animate({'height': '100px', 'width': '100px'});
+	</script>
 </body>
 </html>

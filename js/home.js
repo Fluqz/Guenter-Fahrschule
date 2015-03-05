@@ -9,7 +9,7 @@ $(document).ready(function(){
 			columnWidth: '.item',
 		    gutter: 10,
 	});
-
+	
 
 	imagesLoaded(container, function(){
 		msnry.layout();
