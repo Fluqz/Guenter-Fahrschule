@@ -3,7 +3,7 @@
 body{
 	margin: 0;
 	padding: 0;
-	font-family: 'rbno2_light_alternative_Rg' ,Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
+	font-family: enigmaticregular ,Calibri, Candara, Segoe, "Segoe UI", Optima, Arial, sans-serif;
 	background-color: #efefef;
 }
 
@@ -12,7 +12,12 @@ li, ul, ol{list-style-type: none;}
 input:focus { outline: none; }
 button{outline: none;border:none;}
 
-
+::selection {
+  background: #ff6347; /* WebKit/Blink Browsers */
+}
+::-moz-selection {
+  background: #ff6347; /* Gecko Browsers */
+}
 
 
 
@@ -165,7 +170,7 @@ header #logo{
 	height: 40px;
 	width: 40px;
 	background-color: transparent;
-	color: #323232;
+	color: transparent;
 	line-height: 40px;
 	text-align: center;
 	font-size: 22px;
@@ -174,12 +179,24 @@ header #logo{
 	display: inline-block;
 	margin-right: 5px;
 	margin-top: 10px;
+}
 
-	-o-transition:color .2s, background .2s, transfrom .5s;
-	-ms-transition:color .2s, background .2s, transfrom .5s;
-	-moz-transition:color .2s, background .2s, transfrom .5s;
-	-webkit-transition:color .2s, background .2s, transfrom .5s;
-	transition:color .2s, background .2s, transfrom .5s;
+.backgroundclip i{	
+	background-image: url('../imgs/mediahover.jpg');
+	background-position: 80% 0%;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+
+	-webkit-transition: background-position .5s;
+	-moz-transition: background-position .5s;
+	-ms-transition: background-position .5s;
+	-o-transition: background-position .5s;
+	transition: background-position .5s;
+	color: #efefef;
+}
+
+.backgroundclip:hover > i{
+	background-position: 0% 0%;
 }
 
 /*
@@ -189,13 +206,13 @@ header #logo{
 	-webkit-background-clip: text;
   	-webkit-text-fill-color: transparent;
 }
-*/
 
 #facebook:hover{color: #3B5999;}
 #google:hover{color: #C34242;}
 #twitter:hover{color: #5FA8E9;}
 #instagram:hover{color: #3F92A0;}
 
+*/
 
 #color-palette{
 	width: 100%;
@@ -1117,7 +1134,7 @@ footer{
 	left: 0;
 	right: 0;
 	display: inline-block;
-	width: 30%;
+	width: 150px;
 	height: auto;
 	background-color: transparent;
 	color: #FF6347;
@@ -1322,7 +1339,7 @@ footer{
 	float: left;	
 	height: 90;
 	width: 250px;
-	margin-left: 20px;
+	margin-left: 10px;
 	margin-top: 10px;
 }
 
@@ -1615,3 +1632,80 @@ footer{
 .hoverable{opacity: .7;}
 
 .hoverable:hover{opacity: 1;}
+
+
+.pulse {
+	-webkit-animation: pulse 1s linear infinite;
+	-moz-animation: pulse 1s linear infinite;
+	-ms-animation: pulse 1s linear infinite;
+	animation: pulse 1s linear infinite;
+}
+
+@keyframes "pulse"{
+	0% {
+		-webkit-transform: scale(1.1);
+		-moz-transform: scale(1.1);
+		-o-transform: scale(1.1);
+		-ms-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	50% {
+		-webkit-transform: scale(0.8);
+		-moz-transform: scale(0.8);
+		-o-transform: scale(0.8);
+		-ms-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		-moz-transform: scale(1);
+		-o-transform: scale(1);
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@-moz-keyframes pulse{
+	0% {
+		-moz-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	50% {
+	-moz-transform: scale(0.8);
+	transform: scale(0.8);
+	}
+	100% {
+		-moz-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@-webkit-keyframes "pulse"{
+	0% {
+		-webkit-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	50% {
+		-webkit-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+	100% {
+		-webkit-transform: scale(1);
+		transform: scale(1);
+	}
+}
+
+@-ms-keyframes "pulse"{
+	0% {
+		-ms-transform: scale(1.1);
+		transform: scale(1.1);
+	}
+	50% {
+		-ms-transform: scale(0.8);
+		transform: scale(0.8);
+	}
+	100% {
+		-ms-transform: scale(1);
+		transform: scale(1);
+	}
+}

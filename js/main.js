@@ -1,6 +1,6 @@
 
 $(document).ready(function(){
-	var s = skrollr.init({smoothScrolling: true, forceHeight: false});
+	var s = skrollr.init({smoothScrolling: true, forceHeight: false, easing: 'sqrt'});
 
 	$window = $(window);
 	$body = $('body');
@@ -39,6 +39,7 @@ $(document).ready(function(){
 	});
 
 
+
 	// Detect Adblock
 	/*if (document.getElementById("tester") == undefined){ 
 		document.write(' TEXT TO DISPLAY IF ADBLOCK IS ACTIVE');
@@ -63,7 +64,6 @@ $(document).ready(function(){
 
 	// Smooth scroll on #top
 	$scrollToTop.smoothScroll();
-	$('#footer-logo').smoothScroll();
 	$('#footer-content .chevron').smoothScroll();
 
 
@@ -71,23 +71,46 @@ $(document).ready(function(){
 	// Show login form
 	$loginBtn.bind('click', function(event){
 		event.preventDefault();
-		$('#signupField').hide();
-		$('#loginField').show();
+		$('#signupField').fadeOut('fast',function(){
+			$('#loginField').fadeIn('fast');
+		});
 		$('.front-login').addClass('log-active');
 		$('.front-signup').removeClass('log-active');
-		$loginField.animate({'top':'10px'});
+		$loginField.animate({'top':'10px'}, {easing: 'easeInOutBack'});
 		$loginFieldOut=true;
 		document.getElementById('loginDataInput').focus();
 	});
 
 	$signupBtn.bind('click', function(event) {
 		event.preventDefault();
-		$('#loginField').hide();
-		$('#signupField').show();
+		$('#loginField').fadeOut('fast',function(){
+			$('#signupField').fadeIn('fast');
+		});
 		$('.front-signup').addClass('log-active');
 		$('.front-login').removeClass('log-active');	
-		$loginField.animate({'top':'10px'});
+		$loginField.animate({'top':'10px'}, {easing: 'easeInOutBack'});
 		$loginFieldOut=true;	
+		document.getElementById('signupDataInput').focus();
+	});
+
+	// Switching tabs
+	$('.front-login').on('click', function(event) {
+		event.preventDefault();
+		$('#signupField').fadeOut('fast',function(){
+			$('#loginField').fadeIn('fast');
+		});
+		$(this).addClass('log-active');
+		$('.front-signup').removeClass('log-active');
+		document.getElementById('loginDataInput').focus();
+	});
+
+	$('.front-signup').on('click', function(event) {
+		event.preventDefault();
+		$('#loginField').fadeOut('fast',function(){
+			$('#signupField').fadeIn('fast');
+		});
+		$(this).addClass('log-active');
+		$('.front-login').removeClass('log-active');
 		document.getElementById('signupDataInput').focus();
 	});
 
@@ -104,13 +127,13 @@ $(document).ready(function(){
 	    if (!loginField.is(e.target) && loginField.has(e.target).length === 0 &&
 	    	!loginBtn.is(e.target) && loginBtn.has(e.target).length === 0 &&
 	    	!signupBtn.is(e.target) && signupBtn.has(e.target).length === 0 && $loginFieldOut){
-	        loginField.animate({'top': '-300px'});
+	        loginField.animate({'top': '-300px'}, {easing: 'easeInOutBack'});
 	        $loginFieldOut=false;
 	    }
 
 	    // Hide login form clicking on X
 	    if(close.is(e.target)){
-	        loginField.animate({'top': '-300px'});
+	        loginField.animate({'top': '-300px'}, {easing: 'easeInOutBack'});
 	        $loginFieldOut=false;
 
 	        document.getElementById('loginDataInput').blur();
@@ -120,32 +143,9 @@ $(document).ready(function(){
 	        var signupForm = document.getElementById('signupField');
 	        signupForm.reset();
 	    }
-
-	    // Hide login form on Sidebar pullout
-	    if(sidebar.is(e.target)){
-	        loginField.animate({'top': '-300px'});
-	        $loginFieldOut=false;
-	    }
 	});
 
-	// Switching tabs
-	$('.front-login').on('click', function(event) {
-		event.preventDefault();
-		$('#signupField').hide();
-		$('#loginField').show();
-		$(this).addClass('log-active');
-		$('.front-signup').removeClass('log-active');
-		document.getElementById('loginDataInput').focus();
-	});
 
-	$('.front-signup').on('click', function(event) {
-		event.preventDefault();
-		$('#loginField').hide();
-		$('#signupField').show();
-		$(this).addClass('log-active');
-		$('.front-login').removeClass('log-active');
-		document.getElementById('signupDataInput').focus();
-	});
 
     // Search field
 	$('.searchbox-input').prop('required', 'true');
@@ -186,6 +186,29 @@ $(document).ready(function(){
 		}
 	});
 
+
+	function filled(){
+		var inputVal = $('.searchbox-input').val();
+		inputVal = $.trim(inputVal).length;
+
+		if(inputVal !== 0)
+			return true;
+		else
+			return false;
+	}
+
+	function buttonUp(){
+		var inputVal = $('.searchbox-input').val();
+		inputVal = $.trim(inputVal).length;
+
+		if(inputVal !== 0){
+			$('.searchbox-icon').css('display', 'none');
+		} else{
+			$('.searchbox-input').val('');
+			$('.searchbox-icon').css('display', 'block');
+		}
+	}
+
 	// Infobox
 	$getInfo.bind('mouseover', function(event) {
 		createInfobox($(this));
@@ -195,57 +218,49 @@ $(document).ready(function(){
 		$infoBox.stop(false, false).fadeOut(150);
 	});
 
+
+
+	function createInfobox(jqElement){
+		var offset = jqElement.offset();
+		var offsetTop,
+			offsetLeft,
+			arrowOffsetLeft,
+			infoArrowHeight = 7,
+			infoArrowWidth = 6,
+			infoBoxHeight = Math.floor($infoBox.height()),
+			infoBoxWidth = $infoBox.width(),
+			infoEleHeight = Math.floor(jqElement.height()),
+			infoEleWidth = Math.floor(jqElement.width()),
+			arrowUpPos = -6,
+			arrowDownPos = -6;
+
+		offsetTop = offset.top - (infoBoxHeight + 20) - infoArrowHeight;
+		offsetLeft = (offset.left + (infoEleWidth / 2)) - (infoBoxWidth / 2) - 12;
+		arrowOffsetLeft = (infoBoxWidth / 2) + infoArrowWidth;
+
+		if(offsetTop <= 0){
+			offsetTop = offset.top + infoEleHeight + infoArrowHeight;
+			$infoArrow.removeClass('info-arrow-down').addClass('info-arrow-up');
+		}
+		else{
+			if($infoArrow.hasClass('info-arrow-up'))
+				$infoArrow.removeClass('info-arrow-up').addClass('info-arrow-down');
+		}
+		
+		$infoBox.css({'top': offsetTop + 'px', 'left': offsetLeft + 'px'}).stop(false, false).fadeIn(150);
+		$infoArrow.css('left', arrowOffsetLeft + 'px');
+	}
+
+	Modernizr.addTest('mediaBtn',function() {
+
+		var div = document.createElement('div');
+
+		if ('mediaBtn' in div.style)
+		  return true;
+
+		'Webkit Moz O ms Khtml'.replace(/([A-Za-z]*)/g,function(val) { 
+		  if (val+'mediaBtn' in div.style) return true;
+		});
+
+	});
 });
-
-function filled(){
-	var inputVal = $('.searchbox-input').val();
-	inputVal = $.trim(inputVal).length;
-
-	if(inputVal !== 0)
-		return true;
-	else
-		return false;
-}
-
-function buttonUp(){
-	var inputVal = $('.searchbox-input').val();
-	inputVal = $.trim(inputVal).length;
-
-	if(inputVal !== 0){
-		$('.searchbox-icon').css('display', 'none');
-	} else{
-		$('.searchbox-input').val('');
-		$('.searchbox-icon').css('display', 'block');
-	}
-}
-
-function createInfobox(jqElement){
-	var offset = jqElement.offset();
-	var offsetTop,
-		offsetLeft,
-		arrowOffsetLeft,
-		infoArrowHeight = 7,
-		infoArrowWidth = 6,
-		infoBoxHeight = Math.floor($infoBox.height()),
-		infoBoxWidth = $infoBox.width(),
-		infoEleHeight = Math.floor(jqElement.height()),
-		infoEleWidth = Math.floor(jqElement.width()),
-		arrowUpPos = -6,
-		arrowDownPos = -6;
-
-	offsetTop = offset.top - (infoBoxHeight + 20) - infoArrowHeight;
-	offsetLeft = (offset.left + (infoEleWidth / 2)) - (infoBoxWidth / 2) - 12;
-	arrowOffsetLeft = (infoBoxWidth / 2) + infoArrowWidth;
-
-	if(offsetTop <= 0){
-		offsetTop = offset.top + infoEleHeight + infoArrowHeight;
-		$infoArrow.removeClass('info-arrow-down').addClass('info-arrow-up');
-	}
-	else{
-		if($infoArrow.hasClass('info-arrow-up'))
-			$infoArrow.removeClass('info-arrow-up').addClass('info-arrow-down');
-	}
-	
-	$infoBox.css({'top': offsetTop + 'px', 'left': offsetLeft + 'px'}).stop(false, false).fadeIn(150);
-	$infoArrow.css('left', arrowOffsetLeft + 'px');
-}
