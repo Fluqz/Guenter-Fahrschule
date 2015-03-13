@@ -38,10 +38,15 @@ $(document).ready(function(){
 		getSize();
 	});
 
-
+	if(bowser.webkit){
+		$('.mediaBtn').addClass('backgroundclip');
+	}
+	else{	
+		$('.mediaBtn').addClass('socialmedia');		
+	}
 
 	// Detect Adblock
-	/*if (document.getElementById("tester") == undefined){ 
+	/*if (document.getElementById("tester") == undefined){
 		document.write(' TEXT TO DISPLAY IF ADBLOCK IS ACTIVE');
 	}*/
 
@@ -219,7 +224,6 @@ $(document).ready(function(){
 	});
 
 
-
 	function createInfobox(jqElement){
 		var offset = jqElement.offset();
 		var offsetTop,
@@ -250,17 +254,4 @@ $(document).ready(function(){
 		$infoBox.css({'top': offsetTop + 'px', 'left': offsetLeft + 'px'}).stop(false, false).fadeIn(150);
 		$infoArrow.css('left', arrowOffsetLeft + 'px');
 	}
-
-	Modernizr.addTest('mediaBtn',function() {
-
-		var div = document.createElement('div');
-
-		if ('mediaBtn' in div.style)
-		  return true;
-
-		'Webkit Moz O ms Khtml'.replace(/([A-Za-z]*)/g,function(val) { 
-		  if (val+'mediaBtn' in div.style) return true;
-		});
-
-	});
 });
