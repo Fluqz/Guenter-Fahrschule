@@ -13,20 +13,21 @@ $(document).ready(function(){
 	var bluebar = document.querySelector('.blue-side');
 	var menuIsOpen = false;
 	var mapSwitcher = document.querySelectorAll('.map-switcher');
+	//var showSocials = document.querySelector('.show-socials');
+	var socials = document.querySelector('.header-social');
+	var socialIcon = document.querySelector('.show-socials .menu-icons');
 
 	// if imgs are loaded
 	imagesLoaded(wrapper, function(){
-		setBrowserSize();
 		$('#load-screen').removeClass('visible');
 	});
 
 	// on resize
-	$window.resize(function(event) {
-		if(menuIsOpen){
-			wrapper.style.width = '100%';
-		}
-		else
-			wrapper.style.width = '100%';
+	$window.resize(function(event){
+		wrapper.style.width = '100%';
+		wrapper.style.transition = 'width .0001s';
+		closeMenu();
+		unloadCrumps();
 	});
 
 
@@ -57,49 +58,76 @@ $(document).ready(function(){
 			menuIsOpen = true;
 		}
 		wrapper.style.transition = 'width .3s cubic-bezier(.74,.19,.69,.85)';
-		google.maps.event.trigger(map);
-		
+		google.maps.event.trigger(map, 'resize');
 	}
 
 	$(this).mouseup(function(event){
 		var menuF = $('.menu');
+		var socialF = $('.header-social');
+		var socialBtnF = $('.show-socials.menu-icons');
 		if(!menuF.is(event.target) && menuF.has(event.target).length === 0 && menuIsOpen)
 			closeMenu();
+
+		if(!socialF.is(event.target) && socialF.has(event.target).length === 0 &&
+			!socialBtnF.is(event.target) && socialBtnF.has(event.target).length === 0){
+			socials.classList.remove('social-visible');
+			socialIcon.classList.remove('focus-social');
+		}
 	});
 
 	function closeMenu(){
-			menu.classList.remove('menu-visible');
-			openMenu.classList.remove('open-menu');
-			wrapper.style.width = '100%';
-			menuIsOpen = false;
-			google.maps.event.trigger(map, 'resize');
-	}
+		menu.classList.remove('menu-visible');
+		openMenu.classList.remove('open-menu');
+		wrapper.style.width = '100%';
+		menuIsOpen = false;
 
-	function contentResize(){
-		wrapper.style.width = (wrapper.offsetWidth-200) + 'px';
+		wrapper.addEventListener('transitionend', function(){
+			google.maps.event.trigger(map, 'resize');
+		});
 	}
 
 	/* breadcrumps on Icons on scroll */
 	$window.scroll(function(event) {
-		for(var i = 0; i < listItems.length; i++){
-			if(sections[i].offsetTop-1 <= $(this).scrollTop()){
-				listItems[i].classList.add('already-scrolled');
-				if(listItems[listItems.length-1].classList.contains('already-scrolled'))
-					bluebar.classList.add('filled-blue');
-				else if(bluebar.classList.contains('filled-blue'))
-					bluebar.classList.remove('filled-blue');
-			}
-			else{listItems[i].classList.remove('already-scrolled');bluebar.classList.remove('filled-blue'); return;}
-		}
+		loadCrumps();
 	});
 
 	$window.load(function() {
 		unloadCrumps();
+		loadCrumps();
 	});
 
+	function loadCrumps(){
+		for(var i = 0; i < listItems.length-1; i++){
+			if(sections[i].offsetTop-1 <= $(this).scrollTop()){
+				listItems[i].classList.add('already-scrolled');
+				if(listItems[listItems.length-2].classList.contains('already-scrolled'))
+					bluebar.classList.add('filled-blue');
+				else if(bluebar.classList.contains('filled-blue'))
+					bluebar.classList.remove('filled-blue');
+			}
+			else{
+				listItems[i].classList.remove('already-scrolled');
+				bluebar.classList.remove('filled-blue'); return;
+			}
+			if(i == 5)
+				socialIcon.classList.add('fill-social');
+			else
+				socialIcon.classList.remove('fill-social');
+		}
+	}
+
 	function unloadCrumps(){
-		for(var i = 0; i < listItems.length; i++)
+		for(var i = 0; i < listItems.length-1; i++)
 			listItems[i].classList.remove('already-scrolled');
+		socialIcon.classList.remove('fill-social');
+	}
+
+	// Show Social Media
+	socialIcon.addEventListener('click', slideOutSocial, false);
+
+	function slideOutSocial(){
+		socials.classList.toggle('social-visible');
+		socialIcon.classList.toggle('focus-social');
 	}
 
 
