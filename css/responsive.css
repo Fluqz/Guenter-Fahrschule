@@ -23,8 +23,18 @@
 		background-color: #323232;
 		opacity: .5;
 	}
-	.h1-colored{color: #DDBF8E;font-size: 60px;}
-	.inner-content{width: 90%;color: #eee;top: 40%;width: 90%;}
+	.h1-colored{color: #DDBF8E;font-size: 60px;margin-top: 0px;padding-top: 0px;}
+	.inner-content{
+		color: #eee;
+		width: 60%;
+		min-height: 100px;
+		overflow: hidden;
+		margin: 0 auto;
+	 	position: relative;
+		top: 45%;
+		transform: translateY(-45%);
+		text-align: center;
+	}
 	.section{display: block;}
 	.image-button{display: none;cursor: pointer;}
 	.circle-image-button{display: none;cursor: pointer;}
@@ -106,6 +116,19 @@
 	}
 	.education-single:last-child{border: none;}
 	.education-single h1{margin-top: 50px;}
+	.single-education-content{
+		height: 230px;
+	}
+
+	.single-education-content h1{
+		padding-top: 0px;
+		margin-top: 0px;
+	}
+}
 
 
+@media screen and (max-width: 780px){
+		.inner-content{
+			width: 100%;
+		}
 }

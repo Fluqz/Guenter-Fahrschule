@@ -528,11 +528,29 @@ h3{margin: 0;}
 }
 
 .education-single{
+	position: relative;
 	width: 33%;
 	height: 100%;
 	display: inline-block;
 	text-align: center;
 	border-right: 2px solid #ddd;
+}
+
+.single-education-content{
+	position: absolute;
+	display: block;
+	height: 200px;
+	overflow: hidden;
+	top: 0px;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: auto;
+}
+
+.single-education-content h1{
+	margin-top: 0px;
+	padding-top: 0px;
 }
 
 .education-single:last-child{
@@ -622,7 +640,8 @@ h3{margin: 0;}
 
 .inner-content{
 	width: 60%;
-	height: auto;
+	min-height: 100px;
+	overflow: hidden;
 	margin: 0 auto;
  	position: relative;
 	top: 45%;
