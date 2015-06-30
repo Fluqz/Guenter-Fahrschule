@@ -2,12 +2,10 @@
 	.inner-content{width: 70%;}
 }
 
-@media screen and (max-width: 1460px){
-	.inner-content{width: 80%;}
-	#education-content{width: 100%;}
+@media screen and (max-width: 1340px) and (min-width: 1200px){
 }
 
-@media screen and (max-width: 1200px){
+@media screen and (max-width: 1223px){
 	h1{font-size: 40px;}
 	h3{font-size: 35px;}
 	h4{font-size: 30px;}
@@ -124,6 +122,7 @@
 		padding-top: 0px;
 		margin-top: 0px;
 	}
+	.info-text{text-align: left;}
 }
 
 

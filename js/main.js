@@ -4,7 +4,6 @@ var winH = 0;
 $(document).ready(function(){
 
 	$window = $(window);
-	$section = $('.section');
 	var wrapper = document.querySelector('#wrapper');
 	var openMenu = document.querySelector('.toggle-menu');
 	var listItems = document.querySelectorAll('.menu .menu-icons');
@@ -13,9 +12,9 @@ $(document).ready(function(){
 	var bluebar = document.querySelector('.blue-side');
 	var menuIsOpen = false;
 	var mapSwitcher = document.querySelectorAll('.map-switcher');
-	//var showSocials = document.querySelector('.show-socials');
 	var socials = document.querySelector('.header-social');
 	var socialIcon = document.querySelector('.show-socials .menu-icons');
+	var mapTouch = document.querySelector('.map-touch');
 
 	// if imgs are loaded
 	imagesLoaded(wrapper, function(){
@@ -41,6 +40,24 @@ $(document).ready(function(){
 
 	/* Smoothscroll all links */
 	$('.smooth-scroll').smoothScroll({easing: 'swing'});
+
+	/* Fade in content */
+	function fadeInContent(){
+        $('.fade-in-content').each(function(i){
+	            
+            var bottom_of_object = $(this).position().top + $(this).outerHeight();
+            var bottom_of_window = $(window).scrollTop() + $(window).height();
+            
+            /* Adjust the "200" to either have a delay or that the content starts fading a bit before you reach it  */
+            bottom_of_window = bottom_of_window + 200;  
+          
+            if( bottom_of_window > bottom_of_object ){
+                
+                $(this).animate({'opacity':'1'},500);
+                    
+            }
+        });
+	}
 
 
 	/* Toggle menu */
@@ -89,6 +106,8 @@ $(document).ready(function(){
 	/* breadcrumps on Icons on scroll */
 	$window.scroll(function(event) {
 		loadCrumps();
+		setMapBlock();
+		fadeInContent();
 	});
 
 	$window.load(function() {
@@ -98,7 +117,8 @@ $(document).ready(function(){
 
 	function loadCrumps(){
 		for(var i = 0; i < listItems.length-1; i++){
-			if(sections[i].offsetTop-1 <= $(this).scrollTop()){
+			if(sections[i].offsetTop-1 <= $(this).scrollTop() && !hasClass(sections[i], 'already-scrolled')){
+				
 				listItems[i].classList.add('already-scrolled');
 				if(listItems[listItems.length-2].classList.contains('already-scrolled'))
 					bluebar.classList.add('filled-blue');
@@ -196,5 +216,14 @@ $(document).ready(function(){
 				mapSwitcher[i].classList.add('active');
 		}
 		initialize();
+	}
+
+	mapTouch.addEventListener('click', toggleMapTouch, false);
+
+	function toggleMapTouch(){
+		mapTouch.classList.toggle('block-map');
+	}
+	function setMapBlock(){
+		mapTouch.classList.add('block-map');
 	}
 });
