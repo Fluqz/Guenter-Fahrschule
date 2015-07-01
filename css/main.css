@@ -663,14 +663,14 @@ h1{font-size:20px; margin: 20px 0px;}
 }
 
 .inner-content{
-	width: 60%;
+	display: inline-block;
 	min-height: 100px;
 	overflow: hidden;
-	margin: 0 auto;
  	position: relative;
 	top: 45%;
 	transform: translateY(-50%);
 	text-align: center;
+	padding: 0 10px;
 }
 
 .h1-colored{
@@ -790,3 +790,6 @@ footer h1{margin: 0px;display: inline-block;}
 }
 
 .fade-in-content{opacity: 0;}
+
+.margin-right{margin-right: 40px;float: right;}
+.margin-left{margin-left: 40px;float: left;}

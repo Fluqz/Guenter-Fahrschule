@@ -1,8 +1,10 @@
 @media screen and (max-width: 1460px){
-	.inner-content{width: 70%;}
 }
 
 @media screen and (max-width: 1340px) and (min-width: 1200px){
+
+.margin-right{margin-right: 20px;float: right;}
+.margin-left{margin-left: 20px;float: left;}
 }
 
 @media screen and (max-width: 1223px){
@@ -23,8 +25,8 @@
 	}
 	.h1-colored{color: #DDBF8E;font-size: 60px;margin-top: 0px;padding-top: 0px;}
 	.inner-content{
+		display: block;
 		color: #eee;
-		width: 60%;
 		min-height: 100px;
 		overflow: hidden;
 		margin: 0 auto;
@@ -32,7 +34,9 @@
 		top: 45%;
 		transform: translateY(-45%);
 		text-align: center;
-	}
+	}	
+	.margin-right{margin: 0 auto; clear: both;float: none;}
+	.margin-left{margin: 0 auto; clear: both;float: none;}
 	.section{display: block;}
 	.image-button{display: none;cursor: pointer;}
 	.circle-image-button{display: none;cursor: pointer;}
@@ -63,6 +67,7 @@
 	#slide5 .map-switch-wrapper{
 		position: relative;
 		width: 100%;
+		height: 120px;
 		bottom: 0px;
 		top: 0px;
 		left: 0px;
@@ -123,11 +128,22 @@
 		margin-top: 0px;
 	}
 	.info-text{text-align: left;}
+
 }
 
 
 @media screen and (max-width: 780px){
-		.inner-content{
-			width: 100%;
-		}
+	.inner-content{
+	}
+	#slide5 .map-switcher-text{font-size: 30px;}
+}
+
+@media screen and (max-width: 480px){
+	h1{font-size: 30px;}
+	h3{font-size: 25px;}
+	h4{font-size: 20px;}
+	p{font-size: 20px}
+	#slide5 .map-switcher-text{font-size: 20px;}
+	.info-headline h4{font-size: 20px;}
+	.info-text p{font-size: 20px;}
 }
