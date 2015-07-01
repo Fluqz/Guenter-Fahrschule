@@ -670,7 +670,6 @@ h1{font-size:20px; margin: 20px 0px;}
 	top: 45%;
 	transform: translateY(-50%);
 	text-align: center;
-	padding: 0 10px;
 }
 
 .h1-colored{
@@ -791,5 +790,9 @@ footer h1{margin: 0px;display: inline-block;}
 
 .fade-in-content{opacity: 0;}
 
-.margin-right{margin-right: 40px;float: right;}
-.margin-left{margin-left: 40px;float: left;}
+.margin-right{margin-right: 70px;float: right;padding-left: 20px;}
+.margin-left{margin-left: 70px;float: left;padding-right: 20px;}
+.middle-content{
+	margin: 0 auto;
+	display: block;
+}
