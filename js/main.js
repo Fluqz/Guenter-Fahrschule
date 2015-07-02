@@ -104,7 +104,6 @@ $(document).ready(function(){
 	$window.scroll(function(event) {
 		loadCrumps();
 		setMapBlock();
-		fadeInContent();
 	});
 
 	$window.load(function() {
