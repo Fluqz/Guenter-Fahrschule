@@ -1,10 +1,12 @@
-@media screen and (max-width: 1460px){
+@media screen and (max-width: 1350px){
+	.margin-right{margin-right: 45px;float: right;}
+	.margin-left{margin-left: 45px;float: left;}
 }
 
-@media screen and (max-width: 1350px) and (min-width: 1200px){
+@media screen and (max-width: 1280px) and (min-width: 1200px){
 
-.margin-right{margin-right: 20px;float: right;}
-.margin-left{margin-left: 20px;float: left;}
+	.margin-right{margin-right: 28px;float: right;}
+	.margin-left{margin-left: 28px;float: left;}
 }
 
 @media screen and (max-width: 1223px){
@@ -35,8 +37,8 @@
 		transform: translateY(-45%);
 		text-align: center;
 	}	
-	.margin-right{margin: 0 auto; clear: both;float: none;}
-	.margin-left{margin: 0 auto; clear: both;float: none;}
+	.margin-right{margin: 0 auto; clear: both;float: none;padding: 0px;}
+	.margin-left{margin: 0 auto; clear: both;float: none;padding: 0px;}
 	.section{display: block;}
 	.image-button{display: none;cursor: pointer;}
 	.circle-image-button{display: none;cursor: pointer;}
