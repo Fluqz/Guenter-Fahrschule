@@ -20,10 +20,6 @@ $(document).ready(function(){
 
 	// if imgs are loaded
 	imagesLoaded(wrapper, function(){
-		if(!mq.matches)
-			scrollInfoInit();
-		else
-			$scrollInfo.css('display', 'none');
 		fadeInContent();
 		$('#load-screen').removeClass('visible');
 	});
@@ -35,10 +31,7 @@ $(document).ready(function(){
 			wrapper.style.transition = 'width .0001s';
 			closeMenu();
 			unloadCrumps();
-			scrollInfoInit();
 		}
-		else
-			$scrollInfo.css('display', 'none');
 	});
 
 
@@ -48,20 +41,6 @@ $(document).ready(function(){
 		autoPlay: true,
 		lazyLoad: true
 	});
-
-	// Scroll Info init
-	function scrollInfoInit(){
-		var innerWidth = $innerWrapper.width();
-		$scrollInfo.css({
-			'left': ((innerWidth/2) - ($('#scroll-info').width()/2)),
-			'top': '10px',
-			'display': 'block'
-		});
-	}
-
-	function changeScrollInfoText(index){
-		$scrollInfo.children('#scroll-info-text').empty().text(tabs[index].innerHTML);
-	}
 
 	/* Smoothscroll all links */
 	$('.smooth-scroll').smoothScroll({easing: 'swing'});
@@ -150,8 +129,6 @@ $(document).ready(function(){
 				
 				listItems[i].classList.add('already-scrolled');
 
-				if($scrollInfo.children('#scroll-info-text').text() != tabs[i].innerHTML)
-					changeScrollInfoText(i);
 				if(listItems[listItems.length-2].classList.contains('already-scrolled'))
 					bluebar.classList.add('filled-blue');
 				else if(bluebar.classList.contains('filled-blue'))

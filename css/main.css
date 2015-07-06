@@ -796,34 +796,3 @@ footer h1{margin: 0px;display: inline-block;}
 	margin: 0 auto;
 	display: block;
 }
-
-
-
-#scroll-info{
-	display: none;
-	z-index: 999999;
-	position: fixed;
-	top: 0px;
-	left: 0px;
-
-	min-width: 150px;
-	width: 160px;
-	height: 40px;
-	line-height: 40px;
-
-	background-color: #323232;
-	color: #eee;
-	text-align: center;
-	font-size: 16px;
-	border-radius: 3px;
-	opacity: .8;
-
-	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
-}
-
-#scroll-info-text{
-	-webkit-user-select: none; /* Chrome/Safari */        
-	-moz-user-select: none; /* Firefox */
-	-ms-user-select: none; /* IE10+ */
-	cursor: default;
-}
